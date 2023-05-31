@@ -1,0 +1,8 @@
+../BlueNRG_MS/App/app_bluenrg_ms.c:98:6:MX_BlueNRG_MS_Init	56	static
+../BlueNRG_MS/App/app_bluenrg_ms.c:219:6:MX_BlueNRG_MS_Process	8	static
+../BlueNRG_MS/App/app_bluenrg_ms.c:239:13:User_Init	8	static
+../BlueNRG_MS/App/app_bluenrg_ms.c:254:13:User_Process	16	static
+../BlueNRG_MS/App/app_bluenrg_ms.c:317:13:Set_Random_Environmental_Values	48	static
+../BlueNRG_MS/App/app_bluenrg_ms.c:328:13:Set_Random_Motion_Values	1032	static
+../BlueNRG_MS/App/app_bluenrg_ms.c:369:13:Reset_Motion_Values	4	static
+../BlueNRG_MS/App/app_bluenrg_ms.c:390:6:BSP_PB_Callback	16	static
