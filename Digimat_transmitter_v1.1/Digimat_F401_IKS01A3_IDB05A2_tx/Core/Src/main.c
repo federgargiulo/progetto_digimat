@@ -90,7 +90,7 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
-  MX_BlueNRG_MS_Init();
+//  MX_BlueNRG_MS_Init();
   /* USER CODE BEGIN 2 */
 
   if (IKS01A3_MOTION_SENSOR_Init(IKS01A3_LSM6DSO_0, MOTION_ACCELERO)==HAL_OK){
@@ -106,7 +106,7 @@ int main(void)
   {
     /* USER CODE END WHILE */
 
-  MX_BlueNRG_MS_Process();
+//  MX_BlueNRG_MS_Process();
     /* USER CODE BEGIN 3 */
 
 
