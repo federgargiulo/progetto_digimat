@@ -73,7 +73,7 @@ void Error_Handler(void);
 #define TCK_GPIO_Port GPIOA
 
 /* USER CODE BEGIN Private defines */
-
+#define DIM 7000
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus

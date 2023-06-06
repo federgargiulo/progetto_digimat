@@ -22,6 +22,18 @@
 #include "stm32f4xx_it.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+
+#include "iks01a3_motion_sensors.h"
+#include "iks01a3_motion_sensors_ex.h"
+
+//#include "custom_mems_conf.h"
+//#include "lsm6dso.h"
+
+#include "fatfs.h"
+#include "fatfs_sd.h"
+#include "string.h"
+#include "stdio.h"
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -43,6 +55,23 @@
 /* USER CODE BEGIN PV */
 volatile uint8_t FatFsCnt = 0;
 volatile uint8_t Timer1, Timer2;
+extern IKS01A3_MOTION_SENSOR_Axes_t misure_accelerometro[DIM];
+extern int contatore_acquisizioni;
+
+
+extern FATFS fs;  // file system
+extern FIL fil; // File
+extern FILINFO fno;
+extern FRESULT fresult;  // result
+extern UINT br, bw;  // File read/write count
+
+/**** capacity related *****/
+extern FATFS *pfs;
+extern DWORD fre_clust;
+extern uint32_t total, free_space;
+
+#define BUFFER_SIZE 512
+extern char buffer[BUFFER_SIZE];  // to store strings..
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -56,7 +85,7 @@ volatile uint8_t Timer1, Timer2;
 /* USER CODE END 0 */
 
 /* External variables --------------------------------------------------------*/
-
+extern TIM_HandleTypeDef htim3;
 /* USER CODE BEGIN EV */
 void SDTimer_Handler(void)
 {
@@ -212,6 +241,23 @@ void SysTick_Handler(void)
 /* For the available peripheral interrupt handler names,                      */
 /* please refer to the startup file (startup_stm32f4xx.s).                    */
 /******************************************************************************/
+
+/**
+  * @brief This function handles TIM3 global interrupt.
+  */
+void TIM3_IRQHandler(void)
+{
+  /* USER CODE BEGIN TIM3_IRQn 0 */
+
+  /* USER CODE END TIM3_IRQn 0 */
+  HAL_TIM_IRQHandler(&htim3);
+  /* USER CODE BEGIN TIM3_IRQn 1 */
+  IKS01A3_MOTION_SENSOR_GetAxes(IKS01A3_LSM6DSO_0, MOTION_ACCELERO, &misure_accelerometro[contatore_acquisizioni++]);
+//  sprintf((char *)buffer, "%ld,%ld,%ld\r\n",misure_accelerometro.x, misure_accelerometro.y, misure_accelerometro.z );
+//  fresult = f_write(&fil, buffer, bufsize(buffer), &bw);
+
+  /* USER CODE END TIM3_IRQn 1 */
+}
 
 /* USER CODE BEGIN 1 */
 

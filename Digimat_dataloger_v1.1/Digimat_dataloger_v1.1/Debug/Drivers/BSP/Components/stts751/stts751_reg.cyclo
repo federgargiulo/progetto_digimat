@@ -3,9 +3,9 @@ stts751_reg.c:69:9:stts751_write_reg	1
 stts751_reg.c:93:9:stts751_from_lsb_to_celsius	1
 stts751_reg.c:115:9:stts751_from_celsius_to_lsb	1
 stts751_reg.c:141:9:stts751_temp_data_rate_set	6
-stts751_reg.c:188:9:stts751_temp_data_rate_get	17
+stts751_reg.c:188:9:stts751_temp_data_rate_get	13
 stts751_reg.c:270:9:stts751_resolution_set	2
-stts751_reg.c:294:9:stts751_resolution_get	5
+stts751_reg.c:294:9:stts751_resolution_get	4
 stts751_reg.c:335:9:stts751_status_reg_get	1
 stts751_reg.c:353:9:stts751_flag_busy_get	1
 stts751_reg.c:385:9:stts751_temperature_raw_get	2

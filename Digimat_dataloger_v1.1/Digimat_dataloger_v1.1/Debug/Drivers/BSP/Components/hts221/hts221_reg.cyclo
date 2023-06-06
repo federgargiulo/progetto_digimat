@@ -25,9 +25,9 @@ hts221_reg.c:649:9:hts221_status_get	1
 hts221_reg.c:678:9:hts221_drdy_on_int_set	2
 hts221_reg.c:702:9:hts221_drdy_on_int_get	1
 hts221_reg.c:720:9:hts221_pin_mode_set	2
-hts221_reg.c:744:9:hts221_pin_mode_get	3
+hts221_reg.c:744:9:hts221_pin_mode_get	2
 hts221_reg.c:777:9:hts221_int_polarity_set	2
-hts221_reg.c:802:9:hts221_int_polarity_get	3
+hts221_reg.c:802:9:hts221_int_polarity_get	2
 hts221_reg.c:849:9:hts221_hum_rh_point_0_get	1
 hts221_reg.c:868:9:hts221_hum_rh_point_1_get	1
 hts221_reg.c:887:9:hts221_temp_deg_point_0_get	2

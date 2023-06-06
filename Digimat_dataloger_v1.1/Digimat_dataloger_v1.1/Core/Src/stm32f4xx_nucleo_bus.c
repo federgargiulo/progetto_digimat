@@ -396,7 +396,7 @@ __weak HAL_StatusTypeDef MX_I2C1_Init(I2C_HandleTypeDef* hi2c)
   HAL_StatusTypeDef ret = HAL_OK;
 
   hi2c->Instance = I2C1;
-  hi2c->Init.ClockSpeed = 100000;
+  hi2c->Init.ClockSpeed = 400000;
   hi2c->Init.DutyCycle = I2C_DUTYCYCLE_2;
   hi2c->Init.OwnAddress1 = 0;
   hi2c->Init.AddressingMode = I2C_ADDRESSINGMODE_7BIT;
