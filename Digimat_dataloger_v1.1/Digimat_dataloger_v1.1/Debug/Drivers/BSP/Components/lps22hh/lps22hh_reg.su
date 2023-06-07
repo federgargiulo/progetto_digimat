@@ -1,5 +1,5 @@
-../Drivers/BSP/Components/lps22hh/lps22hh_reg.c:48:16:lps22hh_read_reg	4	static
-../Drivers/BSP/Components/lps22hh/lps22hh_reg.c:69:16:lps22hh_write_reg	4	static
+../Drivers/BSP/Components/lps22hh/lps22hh_reg.c:48:16:lps22hh_read_reg	8	static
+../Drivers/BSP/Components/lps22hh/lps22hh_reg.c:69:16:lps22hh_write_reg	8	static
 ../Drivers/BSP/Components/lps22hh/lps22hh_reg.c:91:9:lps22hh_from_lsb_to_hpa	0	static
 ../Drivers/BSP/Components/lps22hh/lps22hh_reg.c:96:9:lps22hh_from_lsb_to_celsius	0	static
 ../Drivers/BSP/Components/lps22hh/lps22hh_reg.c:122:9:lps22hh_autozero_rst_set	24	static

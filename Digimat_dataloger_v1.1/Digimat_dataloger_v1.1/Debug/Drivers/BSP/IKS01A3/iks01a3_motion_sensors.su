@@ -1,4 +1,7 @@
-../Drivers/BSP/IKS01A3/iks01a3_motion_sensors.c:217:9:IKS01A3_MOTION_SENSOR_Init	104	static
+../Drivers/BSP/IKS01A3/iks01a3_motion_sensors.c:1553:16:LSM6DSO_0_Probe	80	static
+../Drivers/BSP/IKS01A3/iks01a3_motion_sensors.c:1636:16:LIS2DW12_0_Probe	80	static
+../Drivers/BSP/IKS01A3/iks01a3_motion_sensors.c:1710:16:LIS2MDL_0_Probe	80	static
+../Drivers/BSP/IKS01A3/iks01a3_motion_sensors.c:217:9:IKS01A3_MOTION_SENSOR_Init	56	static
 ../Drivers/BSP/IKS01A3/iks01a3_motion_sensors.c:1107:9:IKS01A3_MOTION_SENSOR_DeInit	8	static
 ../Drivers/BSP/IKS01A3/iks01a3_motion_sensors.c:1133:9:IKS01A3_MOTION_SENSOR_GetCapabilities	8	static
 ../Drivers/BSP/IKS01A3/iks01a3_motion_sensors.c:1159:9:IKS01A3_MOTION_SENSOR_ReadID	8	static

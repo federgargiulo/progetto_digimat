@@ -1,5 +1,5 @@
-../Drivers/BSP/Components/hts221/hts221_reg.c:47:16:hts221_read_reg	4	static
-../Drivers/BSP/Components/hts221/hts221_reg.c:67:16:hts221_write_reg	4	static
+../Drivers/BSP/Components/hts221/hts221_reg.c:47:16:hts221_read_reg	8	static
+../Drivers/BSP/Components/hts221/hts221_reg.c:67:16:hts221_write_reg	8	static
 ../Drivers/BSP/Components/hts221/hts221_reg.c:98:9:hts221_humidity_avg_set	24	static
 ../Drivers/BSP/Components/hts221/hts221_reg.c:122:9:hts221_humidity_avg_get	16	static
 ../Drivers/BSP/Components/hts221/hts221_reg.c:179:9:hts221_temperature_avg_set	24	static

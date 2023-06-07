@@ -238,6 +238,8 @@ int main(void)
 				fresult = f_mount(&fs, "/", 1);
 				if (fresult != FR_OK) send_uart ("ERROR!!! in mounting SD CARD...\n\n");
 				else send_uart("SD CARD mounted successfully...\n\n");
+
+//				lsm6dso_write_reg(stmdev_ctx_t *ctx, uint8_t reg,uint8_t *data,uint16_t len);
 				if (IKS01A3_MOTION_SENSOR_Init(IKS01A3_LSM6DSO_0, MOTION_ACCELERO)==HAL_OK){
 					IKS01A3_MOTION_SENSOR_SetOutputDataRate(IKS01A3_LSM6DSO_0, MOTION_ACCELERO, 3332);
 					IKS01A3_MOTION_SENSOR_Enable(IKS01A3_LSM6DSO_0, MOTION_ACCELERO);
