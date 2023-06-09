@@ -33,6 +33,8 @@
 #include "fatfs_sd.h"
 #include "string.h"
 #include "stdio.h"
+#include <stdbool.h>
+
 
 /* USER CODE END Includes */
 
@@ -57,6 +59,7 @@ volatile uint8_t FatFsCnt = 0;
 volatile uint8_t Timer1, Timer2;
 extern IKS01A3_MOTION_SENSOR_Axes_t misure_accelerometro[DIM];
 extern int contatore_campioni;
+extern bool premuto;
 
 
 extern FATFS fs;  // file system
@@ -257,6 +260,23 @@ void TIM3_IRQHandler(void)
 //  fresult = f_write(&fil, buffer, bufsize(buffer), &bw);
 
   /* USER CODE END TIM3_IRQn 1 */
+}
+
+/**
+  * @brief This function handles EXTI line[15:10] interrupts.
+  */
+void EXTI15_10_IRQHandler(void)
+{
+  /* USER CODE BEGIN EXTI15_10_IRQn 0 */
+
+  /* USER CODE END EXTI15_10_IRQn 0 */
+  HAL_GPIO_EXTI_IRQHandler(B1_Pin);
+  /* USER CODE BEGIN EXTI15_10_IRQn 1 */
+  //flag da fare toggle
+  //ogni volta che viene premuto il pulsante, viene invertito lo stato
+  premuto=true;
+
+  /* USER CODE END EXTI15_10_IRQn 1 */
 }
 
 /* USER CODE BEGIN 1 */
