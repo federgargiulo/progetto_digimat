@@ -75,7 +75,7 @@ void stop_acquisizione(void);
 
 /* USER CODE BEGIN Private defines */
 #define DIM 7000
-#define DIM_FINESTRA_BANCHI 10
+#define DIM_FINESTRA_BANCHI 1000
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus
