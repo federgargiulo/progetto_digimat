@@ -177,7 +177,7 @@ int main(void)
 	MX_USART2_UART_Init();
 	MX_FATFS_Init();
 	MX_TIM3_Init();
-	  MX_IWDG_Init();
+	MX_IWDG_Init();
 	/* USER CODE BEGIN 2 */
 
 	//	bus_accelerometro.Init=BSP_I2C1_Init;
@@ -237,7 +237,7 @@ int main(void)
 		/* USER CODE END WHILE */
 
 		/* USER CODE BEGIN 3 */
-				HAL_IWDG_Refresh(&hiwdg);
+		HAL_IWDG_Refresh(&hiwdg);
 
 		switch (stato_data_logger){
 

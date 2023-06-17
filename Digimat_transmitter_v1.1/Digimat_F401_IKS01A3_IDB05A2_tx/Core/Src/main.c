@@ -24,6 +24,8 @@
 /* USER CODE BEGIN Includes */
 #include "iks01a3_motion_sensors.h"
 #include "iks01a3_motion_sensors_ex.h"
+#include "iks01a3_env_sensors.h"
+#include "iks01a3_env_sensors_ex.h"
 
 
 /* USER CODE END Includes */
@@ -47,6 +49,7 @@
 
 /* USER CODE BEGIN PV */
 IKS01A3_MOTION_SENSOR_Axes_t misure_accelerometro;
+float misure_temperatura;
 
 /* USER CODE END PV */
 
@@ -90,13 +93,15 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
-//  MX_BlueNRG_MS_Init();
+  MX_BlueNRG_MS_Init();
   /* USER CODE BEGIN 2 */
 
   if (IKS01A3_MOTION_SENSOR_Init(IKS01A3_LSM6DSO_0, MOTION_ACCELERO)==HAL_OK){
 	  IKS01A3_MOTION_SENSOR_Enable(IKS01A3_LSM6DSO_0, MOTION_ACCELERO);
   }
-
+  if(IKS01A3_ENV_SENSOR_Init(IKS01A3_STTS751_0, ENV_TEMPERATURE)==HAL_OK){
+		  IKS01A3_ENV_SENSOR_Enable(IKS01A3_STTS751_0, ENV_TEMPERATURE);
+  }
 
   /* USER CODE END 2 */
 
@@ -106,11 +111,13 @@ int main(void)
   {
     /* USER CODE END WHILE */
 
-//  MX_BlueNRG_MS_Process();
+  MX_BlueNRG_MS_Process();
     /* USER CODE BEGIN 3 */
 
 
   IKS01A3_MOTION_SENSOR_GetAxes(IKS01A3_LSM6DSO_0, MOTION_ACCELERO, &misure_accelerometro);
+
+  IKS01A3_ENV_SENSOR_GetValue(IKS01A3_STTS751_0, ENV_TEMPERATURE, &misure_temperatura);
   HAL_Delay(1);
 
   }
