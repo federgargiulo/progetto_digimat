@@ -50,6 +50,7 @@ extern IIS3DWB_Object_t vibration_sensor;
 extern IIS3DWB_Axes_t misure[DIM];
 
 extern int contatore_campioni;
+extern uint8_t buffer[100];
 
 /* USER CODE END PV */
 
@@ -298,6 +299,8 @@ void TIM4_IRQHandler(void)
   HAL_TIM_IRQHandler(&htim4);
   /* USER CODE BEGIN TIM4_IRQn 1 */
   IIS3DWB_ACC_GetAxes(&vibration_sensor, &misure[contatore_campioni++]);
+//  sprintf((char *)buffer, "msg\r\n");
+//  HAL_UART_Transmit(&huart5, &buffer, sizeof(buffer), 100);
   /* USER CODE END TIM4_IRQn 1 */
 }
 

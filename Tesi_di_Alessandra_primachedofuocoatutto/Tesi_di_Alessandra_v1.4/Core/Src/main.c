@@ -72,7 +72,7 @@ IIS3DWB_Axes_t misure[DIM];
 IIS3DWB_IO_t bus_vibrometro;
 
 volatile int contatore_campioni=0;
-uint8_t buffer[100];
+volatile uint8_t buffer[100];
 
 uint8_t registro_whoami[2]={0x8F, 0x00};
 uint8_t whoami[2]={0};
@@ -191,7 +191,9 @@ int main(void)
 
 	if(IIS3DWB_Init(&vibration_sensor) ==HAL_OK){
 		IIS3DWB_ACC_SetOutputDataRate(&vibration_sensor, 6000);
+		IIS3DWB_ACC_SetFullScale(&vibration_sensor, IIS3DWB_16g);
 		IIS3DWB_ACC_Enable(&vibration_sensor);
+
 	}
 
 	HAL_TIM_Base_Start_IT(&htim4);
@@ -619,7 +621,7 @@ static void MX_TIM4_Init(void)
 	htim4.Instance = TIM4;
 	htim4.Init.Prescaler = 90-1;
 	htim4.Init.CounterMode = TIM_COUNTERMODE_UP;
-	htim4.Init.Period = 200-1;
+	htim4.Init.Period = 500-1;
 	htim4.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
 	htim4.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
 	if (HAL_TIM_Base_Init(&htim4) != HAL_OK)

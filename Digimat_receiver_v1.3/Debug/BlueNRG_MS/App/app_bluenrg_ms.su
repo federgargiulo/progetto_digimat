@@ -1,0 +1,7 @@
+../BlueNRG_MS/App/app_bluenrg_ms.c:115:6:MX_BlueNRG_MS_Init	64	static
+../BlueNRG_MS/App/app_bluenrg_ms.c:236:6:MX_BlueNRG_MS_Process	8	static
+../BlueNRG_MS/App/app_bluenrg_ms.c:256:13:User_Init	8	static
+../BlueNRG_MS/App/app_bluenrg_ms.c:271:6:modem_at_cmd	32	static
+../BlueNRG_MS/App/app_bluenrg_ms.c:300:6:wait4join	8	static
+../BlueNRG_MS/App/app_bluenrg_ms.c:316:13:User_Process	16	static
+../BlueNRG_MS/App/app_bluenrg_ms.c:427:6:BSP_PB_Callback	16	static

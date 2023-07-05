@@ -129,7 +129,7 @@ void Error_Handler(void);
 #define PB0_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
-#define DIM 10000
+#define DIM 2000
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus
