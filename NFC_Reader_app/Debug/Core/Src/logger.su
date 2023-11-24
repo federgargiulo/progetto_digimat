@@ -1,0 +1,6 @@
+../Core/Src/logger.c:75:6:logUsartInit	16	static
+../Core/Src/logger.c:87:9:logUsartTx	16	static
+../Core/Src/logger.c:102:5:logUsart	4	static
+../Core/Src/logger.c:126:7:hex2Str	16	static
+../Core/Src/logger.c:169:6:logITMTx	16	static
+../Core/Src/logger.c:182:5:logITM	4	static

@@ -1,0 +1,6 @@
+st25r95.c:64:12:st25r95Initialize	4
+st25r95.c:89:6:st25r95Deinitialize	1
+st25r95.c:97:6:st25r95SPI_nIRQ_IN_Pulse	1
+st25r95.c:126:6:st25r95SPIResetChip	1
+st25r95.c:142:12:st25r95FieldOn	2
+st25r95.c:151:12:st25r95FieldOff	1

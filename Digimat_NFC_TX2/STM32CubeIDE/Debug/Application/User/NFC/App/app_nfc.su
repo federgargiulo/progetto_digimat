@@ -1,0 +1,5 @@
+C:/Users/federico/Documents/Borse di Ricerca/gennaio-dicembre 2023/git/Digimat_NFC_TX2/NFC/App/app_nfc.c:57:6:MX_NFC_Init	8	static
+C:/Users/federico/Documents/Borse di Ricerca/gennaio-dicembre 2023/git/Digimat_NFC_TX2/NFC/App/app_nfc.c:82:6:MX_NFC_Process	16	static
+C:/Users/federico/Documents/Borse di Ricerca/gennaio-dicembre 2023/git/Digimat_NFC_TX2/NFC/App/app_nfc.c:105:6:MX_NFC4_GPO_Init	16	static
+C:/Users/federico/Documents/Borse di Ricerca/gennaio-dicembre 2023/git/Digimat_NFC_TX2/NFC/App/app_nfc.c:148:6:MX_NFC4_GPO_Process	8	static
+C:/Users/federico/Documents/Borse di Ricerca/gennaio-dicembre 2023/git/Digimat_NFC_TX2/NFC/App/app_nfc.c:171:6:BSP_GPO_Callback	4	static

@@ -1,0 +1,6 @@
+logger.c:75:6:logUsartInit	1
+logger.c:87:9:logUsartTx	2
+logger.c:102:5:logUsart	1
+logger.c:126:7:hex2Str	1
+logger.c:169:6:logITMTx	1
+logger.c:182:5:logITM	1

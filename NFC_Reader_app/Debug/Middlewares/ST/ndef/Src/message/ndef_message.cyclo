@@ -1,0 +1,7 @@
+ndef_message.c:80:20:ndefAllocRecord	2
+ndef_message.c:101:12:ndefMessageInit	2
+ndef_message.c:119:12:ndefMessageGetInfo	4
+ndef_message.c:148:10:ndefMessageGetRecordCount	2
+ndef_message.c:162:12:ndefMessageAppend	5
+ndef_message.c:209:12:ndefMessageDecode	9
+ndef_message.c:255:12:ndefMessageEncode	10

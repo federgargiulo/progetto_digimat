@@ -1,0 +1,15 @@
+rfal_nfc.c:139:12:rfalNfcInitialize	2
+rfal_nfc.c:153:12:rfalNfcDiscover	14
+rfal_nfc.c:213:12:rfalNfcDeactivate	3
+rfal_nfc.c:239:12:rfalNfcSelect	2
+rfal_nfc.c:254:14:rfalNfcGetState	1
+rfal_nfc.c:260:12:rfalNfcGetDevicesFound	4
+rfal_nfc.c:281:12:rfalNfcGetActiveDevice	5
+rfal_nfc.c:306:6:rfalNfcWorker	32
+rfal_nfc.c:531:12:rfalNfcDataExchangeStart	21
+rfal_nfc.c:666:12:rfalNfcDataExchangeGetStatus	12
+rfal_nfc.c:761:19:rfalNfcPollTechDetetection	31
+rfal_nfc.c:948:19:rfalNfcPollCollResolution	36
+rfal_nfc.c:1128:19:rfalNfcPollActivation	27
+rfal_nfc.c:1574:19:rfalNfcNfcDepActivate	3
+rfal_nfc.c:1668:19:rfalNfcDeactivation	8

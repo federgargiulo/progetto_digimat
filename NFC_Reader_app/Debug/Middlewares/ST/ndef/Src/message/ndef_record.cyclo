@@ -1,0 +1,17 @@
+ndef_record.c:78:12:ndefRecordReset	2
+ndef_record.c:106:12:ndefRecordInit	4
+ndef_record.c:126:10:ndefRecordGetHeaderLength	4
+ndef_record.c:157:10:ndefRecordGetLength	2
+ndef_record.c:174:12:ndefRecordSetType	5
+ndef_record.c:193:12:ndefRecordGetType	4
+ndef_record.c:209:6:ndefRecordTypeMatch	6
+ndef_record.c:228:12:ndefRecordSetId	6
+ndef_record.c:254:12:ndefRecordGetId	3
+ndef_record.c:269:12:ndefRecordSetPayload	6
+ndef_record.c:288:12:ndefRecordGetPayload	3
+ndef_record.c:303:12:ndefRecordDecode	18
+ndef_record.c:424:12:ndefRecordEncodeHeader	7
+ndef_record.c:485:19:ndefRecordPayloadEncode	6
+ndef_record.c:522:12:ndefRecordEncode	9
+ndef_record.c:581:10:ndefRecordGetPayloadLength	4
+ndef_record.c:604:16:ndefRecordGetPayloadItem	6

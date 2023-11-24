@@ -1,0 +1,9 @@
+rfal_t4t.c:102:12:rfalT4TPollerComposeCAPDU	10
+rfal_t4t.c:171:12:rfalT4TPollerParseRAPDU	5
+rfal_t4t.c:197:12:rfalT4TPollerComposeSelectAppl	2
+rfal_t4t.c:224:12:rfalT4TPollerComposeSelectFile	2
+rfal_t4t.c:251:12:rfalT4TPollerComposeSelectFileV1Mapping	2
+rfal_t4t.c:278:12:rfalT4TPollerComposeReadData	1
+rfal_t4t.c:299:12:rfalT4TPollerComposeReadDataODO	1
+rfal_t4t.c:330:12:rfalT4TPollerComposeWriteData	2
+rfal_t4t.c:356:12:rfalT4TPollerComposeWriteDataODO	4

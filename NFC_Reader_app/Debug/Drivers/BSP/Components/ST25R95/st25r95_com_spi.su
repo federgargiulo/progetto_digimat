@@ -1,0 +1,16 @@
+../Drivers/BSP/Components/ST25R95/st25r95_com_spi.c:100:6:st25r95SPIRxTx	40	static
+../Drivers/BSP/Components/ST25R95/st25r95_com_spi.c:113:9:st25r95SPISendReceiveByte	32	static
+../Drivers/BSP/Components/ST25R95/st25r95_com_spi.c:122:12:st25r95SPIPollRead	24	static
+../Drivers/BSP/Components/ST25R95/st25r95_com_spi.c:139:12:st25r95SPIPollSend	16	static
+../Drivers/BSP/Components/ST25R95/st25r95_com_spi.c:157:12:st25r95SPISendCommandTypeAndLen	40	static
+../Drivers/BSP/Components/ST25R95/st25r95_com_spi.c:225:12:st25r95SPICommandEcho	16	static
+../Drivers/BSP/Components/ST25R95/st25r95_com_spi.c:286:6:st25r95SPISendData	32	static
+../Drivers/BSP/Components/ST25R95/st25r95_com_spi.c:320:6:st25r95SPISendTransmitFlag	16	static
+../Drivers/BSP/Components/ST25R95/st25r95_com_spi.c:339:6:st25r95SPIPrepareRx	24	static
+../Drivers/BSP/Components/ST25R95/st25r95_com_spi.c:351:12:st25r95SPICompleteRx	24	static
+../Drivers/BSP/Components/ST25R95/st25r95_com_spi.c:575:12:st25r95SPIGetRxStatus	4	static
+../Drivers/BSP/Components/ST25R95/st25r95_com_spi.c:580:6:st25r95SPIIsTransmitCompleted	4	static
+../Drivers/BSP/Components/ST25R95/st25r95_com_spi.c:585:6:st25r95SPIIsInListen	4	static
+../Drivers/BSP/Components/ST25R95/st25r95_com_spi.c:591:6:st25r95SPIIdle	16	static
+../Drivers/BSP/Components/ST25R95/st25r95_com_spi.c:606:6:st25r95SPIGetIdleResponse	16	static
+../Drivers/BSP/Components/ST25R95/st25r95_com_spi.c:633:6:st25r95SPIKillIdle	16	static

@@ -1,0 +1,16 @@
+st25r95_com_spi.c:100:6:st25r95SPIRxTx	4
+st25r95_com_spi.c:113:9:st25r95SPISendReceiveByte	1
+st25r95_com_spi.c:122:12:st25r95SPIPollRead	5
+st25r95_com_spi.c:139:12:st25r95SPIPollSend	2
+st25r95_com_spi.c:157:12:st25r95SPISendCommandTypeAndLen	6
+st25r95_com_spi.c:225:12:st25r95SPICommandEcho	4
+st25r95_com_spi.c:286:6:st25r95SPISendData	8
+st25r95_com_spi.c:320:6:st25r95SPISendTransmitFlag	3
+st25r95_com_spi.c:339:6:st25r95SPIPrepareRx	3
+st25r95_com_spi.c:351:12:st25r95SPICompleteRx	52
+st25r95_com_spi.c:575:12:st25r95SPIGetRxStatus	1
+st25r95_com_spi.c:580:6:st25r95SPIIsTransmitCompleted	1
+st25r95_com_spi.c:585:6:st25r95SPIIsInListen	1
+st25r95_com_spi.c:591:6:st25r95SPIIdle	1
+st25r95_com_spi.c:606:6:st25r95SPIGetIdleResponse	3
+st25r95_com_spi.c:633:6:st25r95SPIKillIdle	2

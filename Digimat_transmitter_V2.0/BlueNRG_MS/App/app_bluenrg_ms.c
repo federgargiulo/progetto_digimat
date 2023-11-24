@@ -304,8 +304,8 @@ static void User_Process(void)
 				uint8_t data[20];
 				sprintf((char *)data, "%ld,%ld,%ld",misure_accelerometro.x, misure_accelerometro.y, misure_accelerometro.z);
 				sendData(data, sizeof(data));
-				sprintf((char *)data, ",%f\r\n", misure_temperatura);
-				sendData(data, sizeof(data));
+//				sprintf((char *)data, ",%f\r\n", misure_temperatura);
+//				sendData(data, sizeof(data));
 			}
 		/* Reset the User Button flag */
 		user_button_pressed = 0;

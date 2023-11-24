@@ -24,6 +24,13 @@
 
 #include "stm32f4xx_nucleo.h"
 
+extern UART_HandleTypeDef huart1;
+#include <stdio.h>
+char c2;
+uint8_t risposta_uart2[50];
+char* msg_ascii_2 = {"AT+SEND=15,303132,0"};
+char* msg_join="AT+JOIN=1";
+
 /** @addtogroup Applications
  *  @{
  */
@@ -208,12 +215,56 @@ void startReadRXCharHandle(void)
 void receiveData(uint8_t* data_buffer, uint8_t Nb_bytes)
 {
   BSP_LED_Toggle(LED2);
-
+  printf("Messaggio ricevuto\n\r");
   for(int i = 0; i < Nb_bytes; i++) {
     printf("%c", data_buffer[i]);
-  }
+ }
+//  uint8_t msg_to_send[50];
+//  sprintf(msg_to_send, "AT+SEND=15,%s,0",data_buffer);
+//  modem_at_cmd2((char) msg_to_send,(int)strlen(msg_to_send));
+//  HAL_Delay(1000);
+//  modem_at_cmd(msg_join,(int)strlen(msg_join));
+//
+//  	printf("Inviato JOIN\r\n");
+//  	HAL_Delay(1000);
+//  	wait4join();
+//  	HAL_Delay(1000);
+  modem_at_cmd2(msg_ascii_2,(int)strlen(msg_ascii_2));
+
+  printf("Inviato send msg_not_ascii\r\n");
   fflush(stdout);
 }
+
+void modem_at_cmd2(char* buffer, int n){
+
+	for(uint8_t i=0; i<n; i++) {
+		HAL_UART_Transmit(&huart1, (uint8_t*) buffer+i, 1, 100);
+		//printf("tx: %c\n",buffer[i]);
+		HAL_UART_Receive(&huart1, &c2, 1, 100);
+		//printf("rx: %c\n",c);
+	}
+
+	//	memset(response,0,sizeof(response));
+	char tredici='\r';
+	HAL_UART_Transmit(&huart1, (uint8_t*) &tredici, 1, 100);
+	//	printf("tx: %c\n",tredici);
+	HAL_UART_Receive(&huart1, &c2, 1, 100);
+	//	printf("rx: %c\n",c);
+	int i=0;
+	memset(risposta_uart2,0,sizeof(risposta_uart2));
+	do {
+		//		if (lora.readable()) {
+		HAL_UART_Receive(&huart1,(uint8_t *) &c2, 1, 100);
+		//printf("rx: %c",c);
+		risposta_uart2[i]=c2;
+		i++;
+		i=i%49;
+
+		//	} while(c!='#' && c!='\r'&& c!=' ' && c!='\n');
+	} while(c2!=' ');
+	printf("%s",risposta_uart2);
+}
+
 
 /**
  * @brief  This function is used to send data related to the sample service

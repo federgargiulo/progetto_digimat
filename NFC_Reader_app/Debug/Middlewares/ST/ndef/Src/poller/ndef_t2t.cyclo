@@ -1,0 +1,14 @@
+ndef_t2t.c:143:19:ndefT2TPollerReadBlock	9
+ndef_t2t.c:179:12:ndefT2TPollerReadBytes	19
+ndef_t2t.c:253:12:ndefT2TPollerContextInitialization	5
+ndef_t2t.c:270:12:ndefT2TPollerNdefDetect	27
+ndef_t2t.c:416:12:ndefT2TPollerReadRawMessage	8
+ndef_t2t.c:452:19:ndefT2TPollerWriteBlock	7
+ndef_t2t.c:482:12:ndefT2TPollerWriteBytes	14
+ndef_t2t.c:544:12:ndefT2TPollerWriteRawMessageLen	11
+ndef_t2t.c:594:12:ndefT2TPollerWriteRawMessage	13
+ndef_t2t.c:656:12:ndefT2TPollerTagFormat	11
+ndef_t2t.c:725:12:ndefT2TPollerCheckPresence	5
+ndef_t2t.c:747:12:ndefT2TPollerCheckAvailableSpace	7
+ndef_t2t.c:771:12:ndefT2TPollerBeginWriteMessage	8
+ndef_t2t.c:806:12:ndefT2TPollerEndWriteMessage	7

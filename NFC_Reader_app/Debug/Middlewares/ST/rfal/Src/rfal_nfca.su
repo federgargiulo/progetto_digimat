@@ -1,0 +1,9 @@
+../Middlewares/ST/rfal/Src/rfal_nfca.c:155:16:rfalNfcaCalculateBcc	24	static
+../Middlewares/ST/rfal/Src/rfal_nfca.c:178:12:rfalNfcaPollerInitialize	16	static
+../Middlewares/ST/rfal/Src/rfal_nfca.c:194:12:rfalNfcaPollerCheckPresence	32	static
+../Middlewares/ST/rfal/Src/rfal_nfca.c:213:12:rfalNfcaPollerTechnologyDetection	24	static
+../Middlewares/ST/rfal/Src/rfal_nfca.c:228:12:rfalNfcaPollerSingleCollisionResolution	72	static
+../Middlewares/ST/rfal/Src/rfal_nfca.c:414:12:rfalNfcaPollerFullCollisionResolution	56	static
+../Middlewares/ST/rfal/Src/rfal_nfca.c:534:12:rfalNfcaPollerSelect	56	static
+../Middlewares/ST/rfal/Src/rfal_nfca.c:594:12:rfalNfcaPollerSleep	32	static
+../Middlewares/ST/rfal/Src/rfal_nfca.c:614:6:rfalNfcaListenerIsSleepReq	16	static

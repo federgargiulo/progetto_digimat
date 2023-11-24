@@ -1,0 +1,6 @@
+ndef_types.c:119:19:ndefTypeStringToTypeId	8
+ndef_types.c:174:12:ndefRecordTypeStringToTypeId	8
+ndef_types.c:214:12:ndefRecordToType	6
+ndef_types.c:252:12:ndefTypeToRecord	5
+ndef_types.c:278:12:ndefRecordSetNdefType	7
+ndef_types.c:302:17:ndefRecordGetNdefType	6

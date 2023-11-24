@@ -1,0 +1,16 @@
+C:/Users/federico/Documents/Borse di Ricerca/gennaio-dicembre 2023/git/Digimat_NFC_TX2/Drivers/BSP/NFC04A1/nfc04a1.c:73:9:NFC04A1_LED_Init	40	static
+C:/Users/federico/Documents/Borse di Ricerca/gennaio-dicembre 2023/git/Digimat_NFC_TX2/Drivers/BSP/NFC04A1/nfc04a1.c:94:9:NFC04A1_LED_DeInit	40	static
+C:/Users/federico/Documents/Borse di Ricerca/gennaio-dicembre 2023/git/Digimat_NFC_TX2/Drivers/BSP/NFC04A1/nfc04a1.c:114:9:NFC04A1_LED_On	16	static
+C:/Users/federico/Documents/Borse di Ricerca/gennaio-dicembre 2023/git/Digimat_NFC_TX2/Drivers/BSP/NFC04A1/nfc04a1.c:127:9:NFC04A1_LED_Off	16	static
+C:/Users/federico/Documents/Borse di Ricerca/gennaio-dicembre 2023/git/Digimat_NFC_TX2/Drivers/BSP/NFC04A1/nfc04a1.c:140:9:NFC04A1_LED_Toggle	16	static
+C:/Users/federico/Documents/Borse di Ricerca/gennaio-dicembre 2023/git/Digimat_NFC_TX2/Drivers/BSP/NFC04A1/nfc04a1.c:153:9:NFC04A1_GPO_Init	32	static
+C:/Users/federico/Documents/Borse di Ricerca/gennaio-dicembre 2023/git/Digimat_NFC_TX2/Drivers/BSP/NFC04A1/nfc04a1.c:181:9:NFC04A1_GPO_DeInit	32	static
+C:/Users/federico/Documents/Borse di Ricerca/gennaio-dicembre 2023/git/Digimat_NFC_TX2/Drivers/BSP/NFC04A1/nfc04a1.c:198:9:NFC04A1_GPO_ReadPin	8	static
+C:/Users/federico/Documents/Borse di Ricerca/gennaio-dicembre 2023/git/Digimat_NFC_TX2/Drivers/BSP/NFC04A1/nfc04a1.c:208:9:NFC04A1_LPD_Init	32	static
+C:/Users/federico/Documents/Borse di Ricerca/gennaio-dicembre 2023/git/Digimat_NFC_TX2/Drivers/BSP/NFC04A1/nfc04a1.c:229:9:NFC04A1_LPD_DeInit	32	static
+C:/Users/federico/Documents/Borse di Ricerca/gennaio-dicembre 2023/git/Digimat_NFC_TX2/Drivers/BSP/NFC04A1/nfc04a1.c:245:9:NFC04A1_LPD_ReadPin	8	static
+C:/Users/federico/Documents/Borse di Ricerca/gennaio-dicembre 2023/git/Digimat_NFC_TX2/Drivers/BSP/NFC04A1/nfc04a1.c:255:9:NFC04A1_LPD_On	8	static
+C:/Users/federico/Documents/Borse di Ricerca/gennaio-dicembre 2023/git/Digimat_NFC_TX2/Drivers/BSP/NFC04A1/nfc04a1.c:268:9:NFC04A1_LPD_Off	8	static
+C:/Users/federico/Documents/Borse di Ricerca/gennaio-dicembre 2023/git/Digimat_NFC_TX2/Drivers/BSP/NFC04A1/nfc04a1.c:281:9:NFC04A1_LPD_Toggle	8	static
+C:/Users/federico/Documents/Borse di Ricerca/gennaio-dicembre 2023/git/Digimat_NFC_TX2/Drivers/BSP/NFC04A1/nfc04a1.c:294:13:BSP_GPO_Callback	4	static
+C:/Users/federico/Documents/Borse di Ricerca/gennaio-dicembre 2023/git/Digimat_NFC_TX2/Drivers/BSP/NFC04A1/nfc04a1.c:302:6:NFC04A1_GPO_IRQHandler	8	static
