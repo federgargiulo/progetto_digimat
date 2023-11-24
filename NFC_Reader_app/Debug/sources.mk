@@ -27,8 +27,5 @@ Core/Startup \
 Drivers/BSP/Components/ST25R95 \
 Drivers/BSP/STM32F4xx-Nucleo \
 Drivers/STM32F4xx_HAL_Driver/Src \
-Middlewares/ST/ndef/Src/message \
-Middlewares/ST/ndef/Src/poller \
-Middlewares/ST/ndef/doc/examples \
 Middlewares/ST/rfal/Src \
 

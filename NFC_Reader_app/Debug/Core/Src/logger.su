@@ -1,6 +1,7 @@
+../Drivers/CMSIS/Include/core_cm4.h:2064:26:ITM_SendChar	16	static,ignoring_inline_asm
 ../Core/Src/logger.c:75:6:logUsartInit	16	static
 ../Core/Src/logger.c:87:9:logUsartTx	16	static
-../Core/Src/logger.c:102:5:logUsart	4	static
-../Core/Src/logger.c:126:7:hex2Str	16	static
+../Core/Src/logger.c:102:5:logUsart	272	static
+../Core/Src/logger.c:126:7:hex2Str	40	static
 ../Core/Src/logger.c:169:6:logITMTx	16	static
-../Core/Src/logger.c:182:5:logITM	4	static
+../Core/Src/logger.c:182:5:logITM	272	static

@@ -1,4 +1,0 @@
-ndef_example_read.c:100:6:ndefExampleRead	7
-ndef_example_read.c:180:6:ndefExampleParseMessage	4
-ndef_example_read.c:212:6:ndefExamplePrintString	2
-ndef_example_read.c:235:6:ndefExampleParseRecord	9
