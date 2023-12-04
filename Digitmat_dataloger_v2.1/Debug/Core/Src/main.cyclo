@@ -1,0 +1,12 @@
+main.c:130:5:bufsize	2
+main.c:137:6:clear_buffer	2
+main.c:142:6:send_uart	1
+main.c:155:5:main	14
+main.c:356:6:SystemClock_Config	3
+main.c:404:13:MX_IWDG_Init	2
+main.c:432:13:MX_SPI1_Init	2
+main.c:470:13:MX_TIM3_Init	4
+main.c:515:13:MX_USART2_UART_Init	2
+main.c:548:13:MX_GPIO_Init	1
+main.c:593:6:stop_acquisizione	2
+main.c:611:6:Error_Handler	1
