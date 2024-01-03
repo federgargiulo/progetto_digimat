@@ -373,7 +373,7 @@ static void User_Process(void)
 	{
 		/* Establish connection with remote device */
 		Make_Connection();
-		lora_join();
+//		lora_join();
 		set_connectable = FALSE;
 		user_button_init_state = BSP_PB_GetState(BUTTON_KEY);
 

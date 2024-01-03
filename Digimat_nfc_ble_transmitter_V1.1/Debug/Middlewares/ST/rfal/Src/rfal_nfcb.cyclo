@@ -1,0 +1,10 @@
+rfal_nfcb.c:159:19:rfalNfcbCheckSensbRes	5
+rfal_nfcb.c:182:12:rfalNfcbPollerInitialize	2
+rfal_nfcb.c:200:12:rfalNfcbPollerInitializeWithParams	2
+rfal_nfcb.c:214:12:rfalNfcbPollerCheckPresence	9
+rfal_nfcb.c:259:12:rfalNfcbPollerSleep	5
+rfal_nfcb.c:287:12:rfalNfcbPollerSlotMarker	8
+rfal_nfcb.c:322:12:rfalNfcbPollerTechnologyDetection	1
+rfal_nfcb.c:331:12:rfalNfcbPollerCollisionResolution	1
+rfal_nfcb.c:339:12:rfalNfcbPollerSlottedCollisionResolution	35
+rfal_nfcb.c:493:10:rfalNfcbTR2ToFDT	1
