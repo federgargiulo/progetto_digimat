@@ -78,6 +78,8 @@
  ******************************************************************************
  */
 
+extern char UID_global[20];
+
 /* P2P communication data */
 static uint8_t NFCID3[] = {0x01, 0xFE, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x0A};
 static uint8_t GB[] = {0x46, 0x66, 0x6d, 0x01, 0x01, 0x11, 0x02, 0x02, 0x07, 0x80, 0x03, 0x02, 0x00, 0x03, 0x04, 0x01, 0x32, 0x07, 0x01, 0x03};
@@ -308,6 +310,9 @@ void demoCycle( void )
                                 
                             default:
                                 platformLog("ISO14443A/NFC-A card found. UID: %s\r\n", hex2Str( nfcDevice->nfcid, nfcDevice->nfcidLen ) );
+                                sprintf((char *)UID_global,"UID: %s \r\n", hex2Str( nfcDevice->nfcid, nfcDevice->nfcidLen ));
+
+
                                 break;
                         }
                         break;

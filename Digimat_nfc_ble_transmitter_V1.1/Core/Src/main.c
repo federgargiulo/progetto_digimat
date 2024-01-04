@@ -47,6 +47,10 @@
 SPI_HandleTypeDef hspi1;
 
 UART_HandleTypeDef huart2;
+
+
+volatile char UID_global[20];
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/

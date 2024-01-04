@@ -63,7 +63,7 @@ extern volatile uint8_t end_read_tx_char_handle;
 extern volatile uint8_t end_read_rx_char_handle;
 
 /* USER CODE BEGIN PV */
-
+extern char UID_global[20];
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -289,6 +289,10 @@ static void User_Process(void)
       /* Send a toggle command to the remote device */
       uint8_t data[20] = {'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F','G','H','I','J'};
       sendData(data, sizeof(data));
+      HAL_Delay(100);
+      sendData(UID_global, sizeof(UID_global));
+      memset(UID_global+5, 0, 15);
+     // sprintf((char *)UID_global,"UID: %s \r\n", "0");
 
       //BSP_LED_Toggle(LED2);  /* Toggle the LED2 locally. */
                                /* If uncommented be sure the BSP_LED_Init(LED2)

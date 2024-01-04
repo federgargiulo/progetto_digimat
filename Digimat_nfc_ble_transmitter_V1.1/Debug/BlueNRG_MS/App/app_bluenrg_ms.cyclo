@@ -2,4 +2,4 @@ app_bluenrg_ms.c:91:6:MX_BlueNRG_MS_Init	12
 app_bluenrg_ms.c:212:6:MX_BlueNRG_MS_Process	1
 app_bluenrg_ms.c:232:13:User_Init	1
 app_bluenrg_ms.c:247:13:User_Process	15
-app_bluenrg_ms.c:309:6:BSP_PB_Callback	1
+app_bluenrg_ms.c:313:6:BSP_PB_Callback	1
