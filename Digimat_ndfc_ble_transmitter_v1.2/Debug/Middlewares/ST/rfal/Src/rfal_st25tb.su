@@ -1,0 +1,13 @@
+../Middlewares/ST/rfal/Src/rfal_st25tb.c:163:13:rfalSt25tbPollerDoCollisionResolution	32	static
+../Middlewares/ST/rfal/Src/rfal_st25tb.c:243:12:rfalSt25tbPollerInitialize	8	static
+../Middlewares/ST/rfal/Src/rfal_st25tb.c:250:12:rfalSt25tbPollerCheckPresence	24	static
+../Middlewares/ST/rfal/Src/rfal_st25tb.c:277:12:rfalSt25tbPollerInitiate	48	static
+../Middlewares/ST/rfal/Src/rfal_st25tb.c:308:12:rfalSt25tbPollerPcall	40	static
+../Middlewares/ST/rfal/Src/rfal_st25tb.c:332:12:rfalSt25tbPollerSlotMarker	40	static
+../Middlewares/ST/rfal/Src/rfal_st25tb.c:361:12:rfalSt25tbPollerSelect	48	static
+../Middlewares/ST/rfal/Src/rfal_st25tb.c:386:12:rfalSt25tbPollerGetUID	40	static
+../Middlewares/ST/rfal/Src/rfal_st25tb.c:410:12:rfalSt25tbPollerCollisionResolution	32	static
+../Middlewares/ST/rfal/Src/rfal_st25tb.c:461:12:rfalSt25tbPollerReadBlock	40	static
+../Middlewares/ST/rfal/Src/rfal_st25tb.c:486:12:rfalSt25tbPollerWriteBlock	48	static
+../Middlewares/ST/rfal/Src/rfal_st25tb.c:527:12:rfalSt25tbPollerCompletion	32	static
+../Middlewares/ST/rfal/Src/rfal_st25tb.c:540:12:rfalSt25tbPollerResetToInventory	32	static
