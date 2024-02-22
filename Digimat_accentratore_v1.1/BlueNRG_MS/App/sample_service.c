@@ -24,14 +24,13 @@
 
 #include "stm32f4xx_nucleo.h"
 
-extern UART_HandleTypeDef huart1;
-extern UART_HandleTypeDef huart6;
+
 #include <stdio.h>
 char c2;
 uint8_t risposta_uart2[50];
 char* msg_ascii_2 = {"AT+SEND=15,303132,0"};
 char* msg_join="AT+JOIN=1";
-uint8_t read_buf[180];
+
 
 /** @addtogroup Applications
  *  @{

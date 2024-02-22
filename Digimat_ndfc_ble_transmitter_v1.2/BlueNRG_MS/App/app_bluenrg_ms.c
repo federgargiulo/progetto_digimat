@@ -65,6 +65,7 @@ extern volatile uint8_t end_read_rx_char_handle;
 
 /* USER CODE BEGIN PV */
 extern char UID_global[20];
+uint8_t inviato_ok=0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -298,7 +299,7 @@ static void User_Process(void)
 			 * E.g. it can be enabled for debugging. */
 
 			sendData(UID_global, sizeof(UID_global));
-
+			inviato_ok++;
 
 		}
 
@@ -306,6 +307,9 @@ static void User_Process(void)
 		user_button_pressed = 0;
 		timer_expired=0;
 		memset(UID_global+5, 0, 15);
+		if(inviato_ok==3){
+			HAL_NVIC_SystemReset();
+		}
 
 	}
 //	user_button_pressed = 0;

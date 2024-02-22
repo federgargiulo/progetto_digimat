@@ -134,7 +134,8 @@ int main(void)
 				// Trovato il carattere 'N'
 				//found = 1;
 
-				HAL_UART_Transmit(&huart2, read_buf + i - 11, 12, 1000);
+				HAL_UART_Transmit(&huart2, read_buf + i - 11, 7, 1000);
+				HAL_UART_Transmit(&huart2, "N,", 2, 1000);
 				//Console_Write("\r\n");
 				// break;
 			}
@@ -142,7 +143,8 @@ int main(void)
 				// Trovato il carattere 'N'
 				//found = 1;
 
-				HAL_UART_Transmit(&huart2, read_buf + i - 11, 12, 1000);
+				HAL_UART_Transmit(&huart2, read_buf + i - 11, 7, 1000);
+				HAL_UART_Transmit(&huart2, "E", 1, 1000);
 				//Console_Write("\r\n");
 				break;
 			}

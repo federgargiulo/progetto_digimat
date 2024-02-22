@@ -68,6 +68,9 @@ extern volatile uint8_t end_read_rx_char_handle;
 /* USER CODE BEGIN PV */
 extern IKS01A3_MOTION_SENSOR_Axes_t misure_accelerometro;
 extern float misure_temperatura;
+extern float misure_umidita;
+extern uint8_t acquisizione_da_inviare;
+uint8_t contatore_invii=0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -277,7 +280,7 @@ static void User_Process(void)
 	}
 
 	/* Check if the User Button has been pushed */
-	if (user_button_pressed)
+	if (user_button_pressed || acquisizione_da_inviare)
 	{
 		/* Debouncing */
 		HAL_Delay(50);
@@ -302,13 +305,18 @@ static void User_Process(void)
 		if (connected && notification_enabled)
 			{
 				uint8_t data[20];
-				sprintf((char *)data, "%ld,%ld,%ld",misure_accelerometro.x, misure_accelerometro.y, misure_accelerometro.z);
+				sprintf((char *)data, "%ld,%ld,%ld,%f,%f#",misure_accelerometro.x, misure_accelerometro.y, misure_accelerometro.z,misure_temperatura,misure_umidita);
 				sendData(data, sizeof(data));
 //				sprintf((char *)data, ",%f\r\n", misure_temperatura);
 //				sendData(data, sizeof(data));
+				contatore_invii++;
 			}
+
 		/* Reset the User Button flag */
 		user_button_pressed = 0;
+		acquisizione_da_inviare=0;
+		/*RESET SISTEMA A 30 INVII, CIRCA 30 SECONDI */
+		if(contatore_invii>30) HAL_NVIC_SystemReset();
 	}
 
 
