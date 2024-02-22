@@ -1,0 +1,7 @@
+stm32f4xx_nucleo_bus.c:130:9:BSP_SPI1_DeInit	3
+stm32f4xx_nucleo_bus.c:156:9:BSP_SPI1_Send	1
+stm32f4xx_nucleo_bus.c:173:10:BSP_SPI1_Recv	1
+stm32f4xx_nucleo_bus.c:190:9:BSP_SPI1_SendRecv	1
+stm32f4xx_nucleo_bus.c:259:9:BSP_GetTick	1
+stm32f4xx_nucleo_bus.c:265:26:MX_SPI1_Init	1
+stm32f4xx_nucleo_bus.c:89:9:BSP_SPI1_Init	3

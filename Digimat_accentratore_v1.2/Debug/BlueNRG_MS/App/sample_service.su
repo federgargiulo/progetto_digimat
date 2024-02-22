@@ -1,0 +1,12 @@
+../BlueNRG_MS/App/sample_service.c:96:12:Add_Sample_Service	80	static
+../BlueNRG_MS/App/sample_service.c:135:6:Make_Connection	56	static
+../BlueNRG_MS/App/sample_service.c:182:6:startReadTXCharHandle	32	static
+../BlueNRG_MS/App/sample_service.c:199:6:startReadRXCharHandle	32	static
+../BlueNRG_MS/App/sample_service.c:218:6:receiveData	8	static
+../BlueNRG_MS/App/sample_service.c:246:6:sendData	16	static
+../BlueNRG_MS/App/sample_service.c:261:6:enableNotification	24	static
+../BlueNRG_MS/App/sample_service.c:281:6:Attribute_Modified_CB	8	static
+../BlueNRG_MS/App/sample_service.c:297:6:GAP_ConnectionComplete_CB	24	static
+../BlueNRG_MS/App/sample_service.c:314:6:GAP_DisconnectionComplete_CB	8	static
+../BlueNRG_MS/App/sample_service.c:335:6:GATT_Notification_CB	8	static
+../BlueNRG_MS/App/sample_service.c:349:6:user_notify	8	static
