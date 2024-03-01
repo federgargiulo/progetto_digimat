@@ -75,7 +75,7 @@ main-build: Digimat_transmitter_V2.0.elf secondary-outputs
 
 # Tool invocations
 Digimat_transmitter_V2.0.elf Digimat_transmitter_V2.0.map: $(OBJS) $(USER_OBJS) C:\Users\federico\Documents\Borse\ di\ Ricerca\gennaio-dicembre\ 2023\git\Digimat_transmitter_V2.0\STM32F401RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "Digimat_transmitter_V2.0.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\federico\Documents\Borse di Ricerca\gennaio-dicembre 2023\git\Digimat_transmitter_V2.0\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Digimat_transmitter_V2.0.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+	arm-none-eabi-gcc -o "Digimat_transmitter_V2.0.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\federico\Documents\Borse di Ricerca\gennaio-dicembre 2023\git\Digimat_transmitter_V2.0\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Digimat_transmitter_V2.0.map" -Wl,--gc-sections -static -L../Middlewares/ST/ARM/DSP/Lib --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

@@ -34,11 +34,11 @@ lps22hh_reg.c:846:9:lps22hh_auto_increment_get	1
 lps22hh_reg.c:866:9:lps22hh_boot_set	2
 lps22hh_reg.c:891:9:lps22hh_boot_get	1
 lps22hh_reg.c:923:9:lps22hh_lp_bandwidth_set	2
-lps22hh_reg.c:948:9:lps22hh_lp_bandwidth_get	5
+lps22hh_reg.c:948:9:lps22hh_lp_bandwidth_get	4
 lps22hh_reg.c:999:9:lps22hh_i2c_interface_set	2
 lps22hh_reg.c:1024:9:lps22hh_i2c_interface_get	3
 lps22hh_reg.c:1058:9:lps22hh_i3c_interface_set	2
-lps22hh_reg.c:1084:9:lps22hh_i3c_interface_get	5
+lps22hh_reg.c:1084:9:lps22hh_i3c_interface_get	4
 lps22hh_reg.c:1122:9:lps22hh_sdo_sa0_mode_set	2
 lps22hh_reg.c:1147:9:lps22hh_sdo_sa0_mode_get	3
 lps22hh_reg.c:1181:9:lps22hh_sda_mode_set	2

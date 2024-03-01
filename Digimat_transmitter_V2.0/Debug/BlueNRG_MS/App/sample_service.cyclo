@@ -9,4 +9,4 @@ sample_service.c:260:6:Attribute_Modified_CB	4
 sample_service.c:276:6:GAP_ConnectionComplete_CB	2
 sample_service.c:293:6:GAP_DisconnectionComplete_CB	1
 sample_service.c:314:6:GATT_Notification_CB	2
-sample_service.c:328:6:user_notify	22
+sample_service.c:328:6:user_notify	21

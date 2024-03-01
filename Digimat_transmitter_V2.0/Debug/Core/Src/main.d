@@ -58,7 +58,8 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Drivers/BSP/Components/stts751/stts751.h \
  ../Drivers/BSP/Components/stts751/stts751_reg.h \
  ../Drivers/BSP/IKS01A3/iks01a3_env_sensors_ex.h \
- ../Drivers/BSP/IKS01A3/iks01a3_env_sensors.h
+ ../Drivers/BSP/IKS01A3/iks01a3_env_sensors.h \
+ ../Middlewares/ST/ARM/DSP/Inc/arm_math.h
 ../Core/Inc/main.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
 ../Core/Inc/stm32f4xx_hal_conf.h:
@@ -121,3 +122,4 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Drivers/BSP/Components/stts751/stts751_reg.h:
 ../Drivers/BSP/IKS01A3/iks01a3_env_sensors_ex.h:
 ../Drivers/BSP/IKS01A3/iks01a3_env_sensors.h:
+../Middlewares/ST/ARM/DSP/Inc/arm_math.h:

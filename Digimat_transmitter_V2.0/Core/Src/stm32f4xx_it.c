@@ -22,6 +22,11 @@
 #include "stm32f4xx_it.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+
+#include "iks01a3_motion_sensors.h"
+#include "iks01a3_motion_sensors_ex.h"
+#include "iks01a3_env_sensors.h"
+#include "iks01a3_env_sensors_ex.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -31,7 +36,7 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-
+#define DIM 2048
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -42,7 +47,7 @@
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN PV */
 volatile uint8_t acquisizione_da_inviare=0;
-
+volatile uint8_t fine=0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -56,9 +61,11 @@ volatile uint8_t acquisizione_da_inviare=0;
 /* USER CODE END 0 */
 
 /* External variables --------------------------------------------------------*/
+extern TIM_HandleTypeDef htim3;
 extern TIM_HandleTypeDef htim10;
 /* USER CODE BEGIN EV */
-
+extern IKS01A3_MOTION_SENSOR_Axes_t misure_accelerometro[DIM];
+extern int conteggio_campioni;
 /* USER CODE END EV */
 
 /******************************************************************************/
@@ -224,8 +231,33 @@ void TIM1_UP_TIM10_IRQHandler(void)
   HAL_TIM_IRQHandler(&htim10);
   /* USER CODE BEGIN TIM1_UP_TIM10_IRQn 1 */
 
-	acquisizione_da_inviare=1;
+//	acquisizione_da_inviare=1;
   /* USER CODE END TIM1_UP_TIM10_IRQn 1 */
+}
+
+/**
+  * @brief This function handles TIM3 global interrupt.
+  */
+void TIM3_IRQHandler(void)
+{
+  /* USER CODE BEGIN TIM3_IRQn 0 */
+
+  /* USER CODE END TIM3_IRQn 0 */
+  HAL_TIM_IRQHandler(&htim3);
+  /* USER CODE BEGIN TIM3_IRQn 1 */
+  if(fine==0)
+  {
+  IKS01A3_MOTION_SENSOR_GetAxes(IKS01A3_LSM6DSO_0, MOTION_ACCELERO, &misure_accelerometro[conteggio_campioni++]);
+  }
+  if(conteggio_campioni==2048){
+	  HAL_TIM_Base_Stop_IT(&htim3);
+	  acquisizione_da_inviare=1;
+	  conteggio_campioni=0;
+	  fine=1;
+
+  }
+
+  /* USER CODE END TIM3_IRQn 1 */
 }
 
 /**

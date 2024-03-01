@@ -1744,10 +1744,10 @@ static void User_Process(void)
  80011f2:	2100      	movs	r1, #0
  80011f4:	4618      	mov	r0, r3
  80011f6:	f00f fd48 	bl	8010c8a <memset>
-		if(inviato_ok==3){
+		if(inviato_ok==10){
  80011fa:	4b0e      	ldr	r3, [pc, #56]	; (8001234 <User_Process+0x118>)
  80011fc:	781b      	ldrb	r3, [r3, #0]
- 80011fe:	2b03      	cmp	r3, #3
+ 80011fe:	2b0a      	cmp	r3, #10
  8001200:	d101      	bne.n	8001206 <User_Process+0xea>
 			HAL_NVIC_SystemReset();
  8001202:	f003 fc94 	bl	8004b2e <HAL_NVIC_SystemReset>

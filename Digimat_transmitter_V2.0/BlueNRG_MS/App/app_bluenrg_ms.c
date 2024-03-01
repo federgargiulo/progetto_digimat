@@ -33,6 +33,17 @@
 #include "iks01a3_motion_sensors_ex.h"
 #include "iks01a3_env_sensors.h"
 #include "iks01a3_env_sensors_ex.h"
+#define ARM_MATH_CM4
+#include "arm_math.h"
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef enum
+{
+	Bearing_Healthy       = 0x01U,
+	Bearing_Broken    = 0x00U
+} Stato_cuscinetto;
+
 /* USER CODE END Includes */
 
 /* Private defines -----------------------------------------------------------*/
@@ -64,13 +75,38 @@ extern volatile uint8_t notification_enabled;
 
 extern volatile uint8_t end_read_tx_char_handle;
 extern volatile uint8_t end_read_rx_char_handle;
+extern volatile fine;
 
 /* USER CODE BEGIN PV */
-extern IKS01A3_MOTION_SENSOR_Axes_t misure_accelerometro;
+
 extern float misure_temperatura;
 extern float misure_umidita;
 extern uint8_t acquisizione_da_inviare;
 uint8_t contatore_invii=0;
+#define DIM 2048
+#define SAMPLES                    DIM             /* 256 real party and 256 imaginary parts */
+#define FFT_SIZE                SAMPLES / 2        /* FFT size is always the same size as we have samples, so 256 in our case */
+extern IKS01A3_MOTION_SENSOR_Axes_t misure_accelerometro[DIM];
+
+extern int conteggio_campioni;
+extern float32_t fft_in_buf_cplx [SAMPLES];
+extern  float32_t fft_in_buf_real [SAMPLES];
+extern float32_t fft_out_buf_real[FFT_SIZE];
+extern float32_t fft_out_buf_comp[FFT_SIZE];
+double psd_out_buf_x[FFT_SIZE];
+double psd_out_buf_y[FFT_SIZE];
+double psd_out_buf_z[FFT_SIZE];
+double sum_psd_out_buf_x;
+double sum_psd_out_buf_y;
+double sum_psd_out_buf_z;
+extern arm_rfft_fast_instance_f32 fft_handler;
+extern arm_cfft_radix4_instance_f32 fft_handler_cplx;
+extern float32_t maxValue;                /* Max FFT value is stored here */
+extern uint32_t maxIndex;                /* Index in Output array where max value is */
+extern TIM_HandleTypeDef htim3;
+Stato_cuscinetto cuscinetto;
+
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -257,6 +293,8 @@ static void User_Process(void)
 	{
 		/* Establish connection with remote device */
 		Make_Connection();
+		HAL_TIM_Base_Start_IT(&htim3);
+
 		set_connectable = FALSE;
 		user_button_init_state = BSP_PB_GetState(BUTTON_KEY);
 	}
@@ -283,54 +321,129 @@ static void User_Process(void)
 	if (user_button_pressed || acquisizione_da_inviare)
 	{
 		/* Debouncing */
-		HAL_Delay(50);
+		//		HAL_Delay(50);
 
 		/* Wait until the User Button is released */
-		while (BSP_PB_GetState(BUTTON_KEY) == !user_button_init_state);
+		//		while (BSP_PB_GetState(BUTTON_KEY) == !user_button_init_state);
 
 		/* Debouncing */
-		HAL_Delay(50);
+		//		HAL_Delay(50);
 
-//		if (connected && notification_enabled)
-//		{
-//			/* Send a toggle command to the remote device */
-//			uint8_t data[20] = {'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F','G','H','I','J'};
-//			sendData(data, sizeof(data));
-//
-//			//BSP_LED_Toggle(LED2);  /* Toggle the LED2 locally. */
-//			/* If uncommented be sure the BSP_LED_Init(LED2)
-//			 * is called in main().
-//			 * E.g. it can be enabled for debugging. */
-//		}
+		//		if (connected && notification_enabled)
+		//		{
+		//			/* Send a toggle command to the remote device */
+		//			uint8_t data[20] = {'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F','G','H','I','J'};
+		//			sendData(data, sizeof(data));
+		//
+		//			//BSP_LED_Toggle(LED2);  /* Toggle the LED2 locally. */
+		//			/* If uncommented be sure the BSP_LED_Init(LED2)
+		//			 * is called in main().
+		//			 * E.g. it can be enabled for debugging. */
+		//		}
 		if (connected && notification_enabled)
-			{
-				uint8_t data[20];
-				sprintf((char *)data, "%ld,%ld,%ld,%f,%f#",misure_accelerometro.x, misure_accelerometro.y, misure_accelerometro.z,misure_temperatura,misure_umidita);
-				sendData(data, sizeof(data));
-//				sprintf((char *)data, ",%f\r\n", misure_temperatura);
-//				sendData(data, sizeof(data));
-				contatore_invii++;
+		{
+
+			if(conteggio_campioni==0){
+				printf("dimensione massima \r\n");
+				/******************************************************************************************/
+				for (int i = 0; i < SAMPLES; i += 2) {
+					fft_in_buf_real[i]=(float32_t)((float32_t)misure_accelerometro[i/2].x);
+					//parte immaginaria
+					fft_in_buf_real[(i + 1)] = 0;
+				}
+				arm_cfft_f32(&fft_handler, fft_in_buf_real, 0, 1);
+				arm_cmplx_mag_f32(fft_in_buf_real, fft_out_buf_real, FFT_SIZE);
+				arm_max_f32(fft_out_buf_real, FFT_SIZE, &maxValue, &maxIndex);
+				for (int i = 0; i < FFT_SIZE; i ++) {
+					psd_out_buf_x[i]= (double)((float)2000.0/2048.0)* pow(abs(fft_out_buf_real[i]),2);
+				}
+				sum_psd_out_buf_x=0;
+				for (int i = 0; i < FFT_SIZE; i ++) {
+
+					sum_psd_out_buf_x= sum_psd_out_buf_x + psd_out_buf_x[i];
+				}
+				sum_psd_out_buf_x=sum_psd_out_buf_x/FFT_SIZE;
+				/******************************************************************************************/
+				/******************************************************************************************/
+				for (int i = 0; i < SAMPLES; i += 2) {
+					fft_in_buf_real[i]=(float32_t)((float32_t)misure_accelerometro[i/2].y);
+					//parte immaginaria
+					fft_in_buf_real[(i + 1)] = 0;
+				}
+				arm_cfft_f32(&fft_handler, fft_in_buf_real, 0, 1);
+				arm_cmplx_mag_f32(fft_in_buf_real, fft_out_buf_real, FFT_SIZE);
+				arm_max_f32(fft_out_buf_real, FFT_SIZE, &maxValue, &maxIndex);
+				for (int i = 0; i < FFT_SIZE; i ++) {
+					psd_out_buf_y[i]= (double)((float)2000.0/2048.0)* pow(abs(fft_out_buf_real[i]),2);
+				}
+				sum_psd_out_buf_y=0;
+				for (int i = 0; i < FFT_SIZE; i ++) {
+
+					sum_psd_out_buf_y= sum_psd_out_buf_y + psd_out_buf_y[i];
+				}
+				sum_psd_out_buf_y=sum_psd_out_buf_y/FFT_SIZE;
+				/******************************************************************************************/
+				/******************************************************************************************/
+				for (int i = 0; i < SAMPLES; i += 2) {
+					fft_in_buf_real[i]=(float32_t)((float32_t)misure_accelerometro[i/2].z);
+					//parte immaginaria
+					fft_in_buf_real[(i + 1)] = 0;
+				}
+				arm_cfft_f32(&fft_handler, fft_in_buf_real, 0, 1);
+				arm_cmplx_mag_f32(fft_in_buf_real, fft_out_buf_real, FFT_SIZE);
+				arm_max_f32(fft_out_buf_real, FFT_SIZE, &maxValue, &maxIndex);
+				for (int i = 0; i < FFT_SIZE; i ++) {
+					psd_out_buf_z[i]= (double)((float)2000.0/2048.0)* pow(abs(fft_out_buf_real[i]),2);
+				}
+				sum_psd_out_buf_z=0;
+				for (int i = 0; i < FFT_SIZE; i ++) {
+
+					sum_psd_out_buf_z= sum_psd_out_buf_z + psd_out_buf_z[i];
+				}
+				sum_psd_out_buf_z=sum_psd_out_buf_z/FFT_SIZE;
+				/******************************************************************************************/
+
+				if(sum_psd_out_buf_y<10000.0)
+					cuscinetto=Bearing_Broken;
+				else cuscinetto=Bearing_Healthy;
+
+				/******************************************************************************************/
+				IKS01A3_ENV_SENSOR_GetValue(IKS01A3_STTS751_0, ENV_TEMPERATURE, &misure_temperatura);
+				IKS01A3_ENV_SENSOR_GetValue(IKS01A3_HTS221_0, ENV_HUMIDITY, &misure_umidita);
+				acquisizione_da_inviare=0;
+				HAL_TIM_Base_Start_IT(&htim3);
+				conteggio_campioni=0;
+				fine=0;
 			}
+
+			uint8_t data[20];
+			sprintf((char *)data, "%d,%f,%f#",cuscinetto, misure_temperatura, misure_umidita);
+						sendData(data, sizeof(data));
+			//				sprintf((char *)data, ",%f\r\n", misure_temperatura);
+			//				sendData(data, sizeof(data));
+			contatore_invii++;
+
+		}
 
 		/* Reset the User Button flag */
 		user_button_pressed = 0;
-		acquisizione_da_inviare=0;
+
 		/*RESET SISTEMA A 30 INVII, CIRCA 30 SECONDI */
-		if(contatore_invii>30) HAL_NVIC_SystemReset();
+				if(contatore_invii>30) HAL_NVIC_SystemReset();
 	}
 
 
 
 	/* USER CODE BEGIN DIGIMAT CODE */
 
-//#ifndef SERVER_ROLE
-//	if (connected && notification_enabled)
-//	{
-//		uint8_t data[50] = {0};
-//		sprintf((char *)data, "%ld,%ld,%ld,%f",misure_accelerometro.x, misure_accelerometro.y, misure_accelerometro.z, misure_temperatura);
-//		sendData(data, sizeof(data));
-//	}
-//#endif
+	//#ifndef SERVER_ROLE
+	//	if (connected && notification_enabled)
+	//	{
+	//		uint8_t data[50] = {0};
+	//		sprintf((char *)data, "%ld,%ld,%ld,%f",misure_accelerometro.x, misure_accelerometro.y, misure_accelerometro.z, misure_temperatura);
+	//		sendData(data, sizeof(data));
+	//	}
+	//#endif
 	/* USER CODE END DIGIMAT CODE */
 }
 

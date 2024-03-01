@@ -2,11 +2,11 @@ bluenrg_gap_aci.c:29:12:aci_gap_init_IDB05A1	3
 bluenrg_gap_aci.c:63:12:aci_gap_init_IDB04A1	3
 bluenrg_gap_aci.c:95:12:aci_gap_set_non_discoverable	2
 bluenrg_gap_aci.c:112:12:aci_gap_set_limited_discoverable	3
-bluenrg_gap_aci.c:175:12:aci_gap_set_discoverable	4
+bluenrg_gap_aci.c:175:12:aci_gap_set_discoverable	3
 bluenrg_gap_aci.c:243:12:aci_gap_set_direct_connectable_IDB05A1	2
 bluenrg_gap_aci.c:272:12:aci_gap_set_direct_connectable_IDB04A1	2
 bluenrg_gap_aci.c:296:12:aci_gap_set_io_capability	2
-bluenrg_gap_aci.c:318:12:aci_gap_set_auth_requirement	4
+bluenrg_gap_aci.c:318:12:aci_gap_set_auth_requirement	3
 bluenrg_gap_aci.c:361:12:aci_gap_set_author_requirement	2
 bluenrg_gap_aci.c:384:12:aci_gap_pass_key_response	2
 bluenrg_gap_aci.c:408:12:aci_gap_authorization_response	2

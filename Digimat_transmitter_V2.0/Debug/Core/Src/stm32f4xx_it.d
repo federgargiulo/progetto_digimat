@@ -36,7 +36,29 @@ Core/Src/stm32f4xx_it.o: ../Core/Src/stm32f4xx_it.c ../Core/Inc/main.h \
  ../Drivers/BSP/STM32F4xx_Nucleo/stm32f4xx_nucleo.h \
  ../Core/Inc/stm32f4xx_nucleo_conf.h \
  ../Drivers/BSP/STM32F4xx_Nucleo/stm32f4xx_nucleo_errno.h \
- ../Core/Inc/stm32f4xx_it.h
+ ../Core/Inc/stm32f4xx_it.h \
+ ../Drivers/BSP/IKS01A3/iks01a3_motion_sensors.h \
+ ../X-CUBE-MEMS1/Target/iks01a3_conf.h \
+ ../Core/Inc/stm32f4xx_nucleo_errno.h \
+ ../Drivers/BSP/Components/Common/motion_sensor.h \
+ ../Drivers/BSP/Components/lsm6dso/lsm6dso.h \
+ ../Drivers/BSP/Components/lsm6dso/lsm6dso_reg.h \
+ ../Drivers/BSP/Components/lis2dw12/lis2dw12.h \
+ ../Drivers/BSP/Components/lis2dw12/lis2dw12_reg.h \
+ ../Drivers/BSP/Components/lis2mdl/lis2mdl.h \
+ ../Drivers/BSP/Components/lis2mdl/lis2mdl_reg.h \
+ ../Drivers/BSP/IKS01A3/iks01a3_motion_sensors_ex.h \
+ ../Drivers/BSP/IKS01A3/iks01a3_motion_sensors.h \
+ ../Drivers/BSP/IKS01A3/iks01a3_env_sensors.h \
+ ../Drivers/BSP/Components/Common/env_sensor.h \
+ ../Drivers/BSP/Components/hts221/hts221.h \
+ ../Drivers/BSP/Components/hts221/hts221_reg.h \
+ ../Drivers/BSP/Components/lps22hh/lps22hh.h \
+ ../Drivers/BSP/Components/lps22hh/lps22hh_reg.h \
+ ../Drivers/BSP/Components/stts751/stts751.h \
+ ../Drivers/BSP/Components/stts751/stts751_reg.h \
+ ../Drivers/BSP/IKS01A3/iks01a3_env_sensors_ex.h \
+ ../Drivers/BSP/IKS01A3/iks01a3_env_sensors.h
 ../Core/Inc/main.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
 ../Core/Inc/stm32f4xx_hal_conf.h:
@@ -77,3 +99,25 @@ Core/Src/stm32f4xx_it.o: ../Core/Src/stm32f4xx_it.c ../Core/Inc/main.h \
 ../Core/Inc/stm32f4xx_nucleo_conf.h:
 ../Drivers/BSP/STM32F4xx_Nucleo/stm32f4xx_nucleo_errno.h:
 ../Core/Inc/stm32f4xx_it.h:
+../Drivers/BSP/IKS01A3/iks01a3_motion_sensors.h:
+../X-CUBE-MEMS1/Target/iks01a3_conf.h:
+../Core/Inc/stm32f4xx_nucleo_errno.h:
+../Drivers/BSP/Components/Common/motion_sensor.h:
+../Drivers/BSP/Components/lsm6dso/lsm6dso.h:
+../Drivers/BSP/Components/lsm6dso/lsm6dso_reg.h:
+../Drivers/BSP/Components/lis2dw12/lis2dw12.h:
+../Drivers/BSP/Components/lis2dw12/lis2dw12_reg.h:
+../Drivers/BSP/Components/lis2mdl/lis2mdl.h:
+../Drivers/BSP/Components/lis2mdl/lis2mdl_reg.h:
+../Drivers/BSP/IKS01A3/iks01a3_motion_sensors_ex.h:
+../Drivers/BSP/IKS01A3/iks01a3_motion_sensors.h:
+../Drivers/BSP/IKS01A3/iks01a3_env_sensors.h:
+../Drivers/BSP/Components/Common/env_sensor.h:
+../Drivers/BSP/Components/hts221/hts221.h:
+../Drivers/BSP/Components/hts221/hts221_reg.h:
+../Drivers/BSP/Components/lps22hh/lps22hh.h:
+../Drivers/BSP/Components/lps22hh/lps22hh_reg.h:
+../Drivers/BSP/Components/stts751/stts751.h:
+../Drivers/BSP/Components/stts751/stts751_reg.h:
+../Drivers/BSP/IKS01A3/iks01a3_env_sensors_ex.h:
+../Drivers/BSP/IKS01A3/iks01a3_env_sensors.h:

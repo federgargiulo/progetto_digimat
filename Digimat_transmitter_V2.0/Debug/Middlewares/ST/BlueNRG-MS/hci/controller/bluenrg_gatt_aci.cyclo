@@ -3,7 +3,7 @@ bluenrg_gatt_aci.c:47:12:aci_gatt_add_serv	4
 bluenrg_gatt_aci.c:96:12:aci_gatt_include_service	4
 bluenrg_gatt_aci.c:152:12:aci_gatt_add_char	4
 bluenrg_gatt_aci.c:225:12:aci_gatt_add_char_desc	5
-bluenrg_gatt_aci.c:315:12:aci_gatt_update_char_value	4
+bluenrg_gatt_aci.c:315:12:aci_gatt_update_char_value	3
 bluenrg_gatt_aci.c:364:12:aci_gatt_del_char	2
 bluenrg_gatt_aci.c:387:12:aci_gatt_del_service	2
 bluenrg_gatt_aci.c:409:12:aci_gatt_del_include_service	2
@@ -35,7 +35,7 @@ bluenrg_gatt_aci.c:1154:12:aci_gatt_read_charac_desc	2
 bluenrg_gatt_aci.c:1178:12:aci_gatt_write_without_response	3
 bluenrg_gatt_aci.c:1207:12:aci_gatt_signed_write_without_resp	3
 bluenrg_gatt_aci.c:1236:12:aci_gatt_confirm_indication	2
-bluenrg_gatt_aci.c:1258:12:aci_gatt_write_response	4
+bluenrg_gatt_aci.c:1258:12:aci_gatt_write_response	3
 bluenrg_gatt_aci.c:1311:12:aci_gatt_allow_read	2
 bluenrg_gatt_aci.c:1333:12:aci_gatt_set_security_permission	2
 bluenrg_gatt_aci.c:1358:12:aci_gatt_set_desc_value	3

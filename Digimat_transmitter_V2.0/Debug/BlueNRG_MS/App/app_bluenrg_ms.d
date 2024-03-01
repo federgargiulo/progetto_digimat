@@ -79,7 +79,8 @@ BlueNRG_MS/App/app_bluenrg_ms.o: ../BlueNRG_MS/App/app_bluenrg_ms.c \
  ../Drivers/BSP/Components/stts751/stts751.h \
  ../Drivers/BSP/Components/stts751/stts751_reg.h \
  ../Drivers/BSP/IKS01A3/iks01a3_env_sensors_ex.h \
- ../Drivers/BSP/IKS01A3/iks01a3_env_sensors.h
+ ../Drivers/BSP/IKS01A3/iks01a3_env_sensors.h \
+ ../Middlewares/ST/ARM/DSP/Inc/arm_math.h
 ../BlueNRG_MS/App/app_bluenrg_ms.h:
 ../Drivers/BSP/STM32F4xx_Nucleo/stm32f4xx_nucleo.h:
 ../Core/Inc/stm32f4xx_nucleo_conf.h:
@@ -165,3 +166,4 @@ BlueNRG_MS/App/app_bluenrg_ms.o: ../BlueNRG_MS/App/app_bluenrg_ms.c \
 ../Drivers/BSP/Components/stts751/stts751_reg.h:
 ../Drivers/BSP/IKS01A3/iks01a3_env_sensors_ex.h:
 ../Drivers/BSP/IKS01A3/iks01a3_env_sensors.h:
+../Middlewares/ST/ARM/DSP/Inc/arm_math.h:

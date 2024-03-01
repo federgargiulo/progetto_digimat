@@ -38,11 +38,11 @@ lis2dw12_reg.c:914:9:lis2dw12_reset_get	1
 lis2dw12_reg.c:933:9:lis2dw12_boot_set	2
 lis2dw12_reg.c:957:9:lis2dw12_boot_get	1
 lis2dw12_reg.c:976:9:lis2dw12_self_test_set	2
-lis2dw12_reg.c:1000:9:lis2dw12_self_test_get	5
+lis2dw12_reg.c:1000:9:lis2dw12_self_test_get	4
 lis2dw12_reg.c:1037:9:lis2dw12_data_ready_mode_set	2
 lis2dw12_reg.c:1062:9:lis2dw12_data_ready_mode_get	3
 lis2dw12_reg.c:1109:9:lis2dw12_filter_path_set	4
-lis2dw12_reg.c:1148:9:lis2dw12_filter_path_get	6
+lis2dw12_reg.c:1148:9:lis2dw12_filter_path_get	5
 lis2dw12_reg.c:1194:9:lis2dw12_filter_bandwidth_set	2
 lis2dw12_reg.c:1220:9:lis2dw12_filter_bandwidth_get	5
 lis2dw12_reg.c:1262:9:lis2dw12_reference_mode_set	2
@@ -72,7 +72,7 @@ lis2dw12_reg.c:1947:9:lis2dw12_wkup_dur_get	1
 lis2dw12_reg.c:1966:9:lis2dw12_wkup_feed_data_set	2
 lis2dw12_reg.c:1991:9:lis2dw12_wkup_feed_data_get	3
 lis2dw12_reg.c:2040:9:lis2dw12_act_mode_set	4
-lis2dw12_reg.c:2082:9:lis2dw12_act_mode_get	6
+lis2dw12_reg.c:2082:9:lis2dw12_act_mode_get	5
 lis2dw12_reg.c:2128:9:lis2dw12_act_sleep_dur_set	2
 lis2dw12_reg.c:2152:9:lis2dw12_act_sleep_dur_get	1
 lis2dw12_reg.c:2184:9:lis2dw12_tap_threshold_x_set	2

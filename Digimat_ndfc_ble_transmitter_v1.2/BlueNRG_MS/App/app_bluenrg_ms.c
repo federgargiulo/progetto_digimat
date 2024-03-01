@@ -307,7 +307,7 @@ static void User_Process(void)
 		user_button_pressed = 0;
 		timer_expired=0;
 		memset(UID_global+5, 0, 15);
-		if(inviato_ok==3){
+		if(inviato_ok==10){
 			HAL_NVIC_SystemReset();
 		}
 
