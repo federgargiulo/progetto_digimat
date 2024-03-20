@@ -4,8 +4,7 @@
 ../Drivers/BSP/Components/lps22hh/lps22hh.c:1060:16:WriteRegWrap	8	static
 ../Drivers/BSP/Components/lps22hh/lps22hh.c:250:9:LPS22HH_PRESS_Enable	8	static
 ../Drivers/BSP/Components/lps22hh/lps22hh.c:376:9:LPS22HH_TEMP_Enable	8	static
-../Drivers/BSP/Components/lps22hh/lps22hh.c:652:16:LPS22HH_Initialize	16	static
-../Drivers/BSP/Components/lps22hh/lps22hh.c:150:9:LPS22HH_Init	8	static
+../Drivers/BSP/Components/lps22hh/lps22hh.c:150:9:LPS22HH_Init	16	static
 ../Drivers/BSP/Components/lps22hh/lps22hh.c:196:9:LPS22HH_ReadID	8	static
 ../Drivers/BSP/Components/lps22hh/lps22hh.c:274:9:LPS22HH_PRESS_Disable	16	static
 ../Drivers/BSP/Components/lps22hh/lps22hh.c:545:16:LPS22HH_GetOutputDataRate	16	static

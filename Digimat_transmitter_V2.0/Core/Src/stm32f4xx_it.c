@@ -20,6 +20,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "stm32f4xx_it.h"
+#include <math.h>
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
@@ -57,7 +58,19 @@ volatile uint8_t fine=0;
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+float calcolaAngoloInclinazione(int32_t accel_x, int32_t accel_y, int32_t accel_z) {
+    // Conversione delle misure di accelerazione in unità standard (es. m/s^2)
+	float A_x = accel_x * 9.8 / 1000.0;  // Conversione da mg a m/s^2
+    float A_y = accel_y * 9.8 / 1000.0;  // Conversione da mg a m/s^2
+    float A_z = accel_z * 9.8 / 1000.0;  // Conversione da mg a m/s^2
 
+    // Calcolo dell'angolo d'inclinazione in radianti
+    float angolo_radiani = atan2(A_y, A_z);
+    // Conversione da radianti a gradi
+    float angolo_gradi = angolo_radiani * 180.0 / M_PI;
+
+    return angolo_gradi;
+}
 /* USER CODE END 0 */
 
 /* External variables --------------------------------------------------------*/
@@ -66,6 +79,8 @@ extern TIM_HandleTypeDef htim10;
 /* USER CODE BEGIN EV */
 extern IKS01A3_MOTION_SENSOR_Axes_t misure_accelerometro[DIM];
 extern int conteggio_campioni;
+extern float angolo;
+
 /* USER CODE END EV */
 
 /******************************************************************************/
@@ -251,10 +266,10 @@ void TIM3_IRQHandler(void)
   }
   if(conteggio_campioni==2048){
 	  HAL_TIM_Base_Stop_IT(&htim3);
+	  angolo=calcolaAngoloInclinazione(misure_accelerometro[2047].x, misure_accelerometro[2047].y, misure_accelerometro[2047].z);
 	  acquisizione_da_inviare=1;
-	  conteggio_campioni=0;
-	  fine=1;
-
+	  	  conteggio_campioni=0;
+	  	  fine=1;
   }
 
   /* USER CODE END TIM3_IRQn 1 */

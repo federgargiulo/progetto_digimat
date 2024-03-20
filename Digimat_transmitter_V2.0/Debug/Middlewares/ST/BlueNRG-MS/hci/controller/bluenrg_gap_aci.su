@@ -36,7 +36,7 @@
 ../Middlewares/ST/BlueNRG-MS/hci/controller/bluenrg_gap_aci.c:1131:12:aci_gap_send_pairing_request	40	static
 ../Middlewares/ST/BlueNRG-MS/hci/controller/bluenrg_gap_aci.c:1155:12:aci_gap_resolve_private_address_IDB05A1	48	static
 ../Middlewares/ST/BlueNRG-MS/hci/controller/bluenrg_gap_aci.c:1182:12:aci_gap_resolve_private_address_IDB04A1	48	static
-../Middlewares/ST/BlueNRG-MS/hci/controller/bluenrg_gap_aci.c:1204:12:aci_gap_set_broadcast_mode	176	static
+../Middlewares/ST/BlueNRG-MS/hci/controller/bluenrg_gap_aci.c:1204:12:aci_gap_set_broadcast_mode	184	static
 ../Middlewares/ST/BlueNRG-MS/hci/controller/bluenrg_gap_aci.c:1244:12:aci_gap_start_observation_procedure	48	static
 ../Middlewares/ST/BlueNRG-MS/hci/controller/bluenrg_gap_aci.c:1272:12:aci_gap_is_device_bonded	48	static
 ../Middlewares/ST/BlueNRG-MS/hci/controller/bluenrg_gap_aci.c:1295:12:aci_gap_get_bonded_devices	176	static

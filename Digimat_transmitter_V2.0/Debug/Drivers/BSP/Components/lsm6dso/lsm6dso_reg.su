@@ -1,4 +1,3 @@
-../Drivers/BSP/Components/lsm6dso/lsm6dso_reg.c:93:13:bytecpy	0	static
 ../Drivers/BSP/Components/lsm6dso/lsm6dso_reg.c:49:16:lsm6dso_read_reg	8	static
 ../Drivers/BSP/Components/lsm6dso/lsm6dso_reg.c:70:16:lsm6dso_write_reg	8	static
 ../Drivers/BSP/Components/lsm6dso/lsm6dso_reg.c:107:9:lsm6dso_from_fs2_to_mg	0	static
@@ -55,7 +54,7 @@
 ../Drivers/BSP/Components/lsm6dso/lsm6dso_reg.c:1533:9:lsm6dso_steps_reset	16	static
 ../Drivers/BSP/Components/lsm6dso/lsm6dso_reg.c:1660:9:lsm6dso_mem_bank_get	16	static
 ../Drivers/BSP/Components/lsm6dso/lsm6dso_reg.c:1699:9:lsm6dso_ln_pg_write_byte	32	static
-../Drivers/BSP/Components/lsm6dso/lsm6dso_reg.c:1773:9:lsm6dso_ln_pg_write	40	static
+../Drivers/BSP/Components/lsm6dso/lsm6dso_reg.c:1773:9:lsm6dso_ln_pg_write	48	static
 ../Drivers/BSP/Components/lsm6dso/lsm6dso_reg.c:1871:9:lsm6dso_ln_pg_read_byte	32	static
 ../Drivers/BSP/Components/lsm6dso/lsm6dso_reg.c:1945:9:lsm6dso_data_ready_mode_set	24	static
 ../Drivers/BSP/Components/lsm6dso/lsm6dso_reg.c:1973:9:lsm6dso_data_ready_mode_get	16	static
@@ -259,7 +258,7 @@
 ../Drivers/BSP/Components/lsm6dso/lsm6dso_reg.c:8219:9:lsm6dso_mag_sensitivity_get	24	static
 ../Drivers/BSP/Components/lsm6dso/lsm6dso_reg.c:8246:9:lsm6dso_mag_offset_set	16	static
 ../Drivers/BSP/Components/lsm6dso/lsm6dso_reg.c:8295:9:lsm6dso_mag_offset_get	24	static
-../Drivers/BSP/Components/lsm6dso/lsm6dso_reg.c:8350:9:lsm6dso_mag_soft_iron_set	32	static
+../Drivers/BSP/Components/lsm6dso/lsm6dso_reg.c:8350:9:lsm6dso_mag_soft_iron_set	24	static
 ../Drivers/BSP/Components/lsm6dso/lsm6dso_reg.c:8467:9:lsm6dso_mag_soft_iron_get	32	static
 ../Drivers/BSP/Components/lsm6dso/lsm6dso_reg.c:8569:9:lsm6dso_mag_z_orient_set	24	static
 ../Drivers/BSP/Components/lsm6dso/lsm6dso_reg.c:8599:9:lsm6dso_mag_z_orient_get	16	static
@@ -317,15 +316,15 @@
 ../Drivers/BSP/Components/lsm6dso/lsm6dso_reg.c:10709:9:lsm6dso_status_get	32	static
 ../Drivers/BSP/Components/lsm6dso/lsm6dso_reg.c:10756:9:lsm6dso_pin_conf_set	32	static
 ../Drivers/BSP/Components/lsm6dso/lsm6dso_reg.c:10809:9:lsm6dso_pin_conf_get	32	static
-../Drivers/BSP/Components/lsm6dso/lsm6dso_reg.c:10849:9:lsm6dso_interrupt_mode_set	32	static
+../Drivers/BSP/Components/lsm6dso/lsm6dso_reg.c:10849:9:lsm6dso_interrupt_mode_set	40	static
 ../Drivers/BSP/Components/lsm6dso/lsm6dso_reg.c:10909:9:lsm6dso_interrupt_mode_get	32	static
 ../Drivers/BSP/Components/lsm6dso/lsm6dso_reg.c:11180:9:lsm6dso_pin_int1_route_get	48	static
 ../Drivers/BSP/Components/lsm6dso/lsm6dso_reg.c:11304:9:lsm6dso_pin_int2_route_set	120	static
 ../Drivers/BSP/Components/lsm6dso/lsm6dso_reg.c:11522:9:lsm6dso_pin_int2_route_get	48	static
-../Drivers/BSP/Components/lsm6dso/lsm6dso_reg.c:10959:9:lsm6dso_pin_int1_route_set	64	static
-../Drivers/BSP/Components/lsm6dso/lsm6dso_reg.c:11658:9:lsm6dso_all_sources_get	72	static
-../Drivers/BSP/Components/lsm6dso/lsm6dso_reg.c:11782:9:lsm6dso_mode_set	112	static
-../Drivers/BSP/Components/lsm6dso/lsm6dso_reg.c:12240:9:lsm6dso_mode_get	96	static
+../Drivers/BSP/Components/lsm6dso/lsm6dso_reg.c:10959:9:lsm6dso_pin_int1_route_set	72	static
+../Drivers/BSP/Components/lsm6dso/lsm6dso_reg.c:11658:9:lsm6dso_all_sources_get	32	static
+../Drivers/BSP/Components/lsm6dso/lsm6dso_reg.c:11782:9:lsm6dso_mode_set	104	static
+../Drivers/BSP/Components/lsm6dso/lsm6dso_reg.c:12240:9:lsm6dso_mode_get	72	static
 ../Drivers/BSP/Components/lsm6dso/lsm6dso_reg.c:12800:9:lsm6dso_data_get	48	static
 ../Drivers/BSP/Components/lsm6dso/lsm6dso_reg.c:12985:9:lsm6dso_embedded_sens_set	24	static
 ../Drivers/BSP/Components/lsm6dso/lsm6dso_reg.c:13041:9:lsm6dso_embedded_sens_get	24	static

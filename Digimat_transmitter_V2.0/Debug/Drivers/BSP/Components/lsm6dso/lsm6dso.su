@@ -1,14 +1,10 @@
 ../Drivers/BSP/Components/lsm6dso/lsm6dso.c:270:9:LSM6DSO_GetCapabilities	0	static
-../Drivers/BSP/Components/lsm6dso/lsm6dso.c:3781:16:LSM6DSO_ACC_SetOutputDataRate_When_Disabled	0	static
-../Drivers/BSP/Components/lsm6dso/lsm6dso.c:3834:16:LSM6DSO_GYRO_SetOutputDataRate_When_Disabled	0	static
 ../Drivers/BSP/Components/lsm6dso/lsm6dso.c:3856:13:LSM6DSO_Delay	16	static
 ../Drivers/BSP/Components/lsm6dso/lsm6dso.c:3873:16:ReadRegWrap	8	static
 ../Drivers/BSP/Components/lsm6dso/lsm6dso.c:3888:16:WriteRegWrap	8	static
 ../Drivers/BSP/Components/lsm6dso/lsm6dso.c:293:9:LSM6DSO_ACC_Enable	8	static
-../Drivers/BSP/Components/lsm6dso/lsm6dso.c:3750:16:LSM6DSO_ACC_SetOutputDataRate_When_Enabled	8	static
 ../Drivers/BSP/Components/lsm6dso/lsm6dso.c:720:9:LSM6DSO_ACC_SetFullScale	8	static
 ../Drivers/BSP/Components/lsm6dso/lsm6dso.c:799:9:LSM6DSO_GYRO_Enable	8	static
-../Drivers/BSP/Components/lsm6dso/lsm6dso.c:3804:16:LSM6DSO_GYRO_SetOutputDataRate_When_Enabled	8	static
 ../Drivers/BSP/Components/lsm6dso/lsm6dso.c:159:9:LSM6DSO_Init	16	static
 ../Drivers/BSP/Components/lsm6dso/lsm6dso.c:1114:9:LSM6DSO_GYRO_SetFullScale	8	static
 ../Drivers/BSP/Components/lsm6dso/lsm6dso.c:254:9:LSM6DSO_ReadID	8	static
@@ -77,9 +73,9 @@
 ../Drivers/BSP/Components/lsm6dso/lsm6dso.c:2945:9:LSM6DSO_FIFO_Set_Mode	8	static
 ../Drivers/BSP/Components/lsm6dso/lsm6dso.c:2994:9:LSM6DSO_FIFO_Get_Tag	16	static
 ../Drivers/BSP/Components/lsm6dso/lsm6dso.c:3014:9:LSM6DSO_FIFO_Get_Data	8	static
-../Drivers/BSP/Components/lsm6dso/lsm6dso.c:3030:9:LSM6DSO_FIFO_ACC_Get_Axes	40	static
+../Drivers/BSP/Components/lsm6dso/lsm6dso.c:3030:9:LSM6DSO_FIFO_ACC_Get_Axes	32	static
 ../Drivers/BSP/Components/lsm6dso/lsm6dso.c:3063:9:LSM6DSO_FIFO_ACC_Set_BDR	8	static
-../Drivers/BSP/Components/lsm6dso/lsm6dso.c:3093:9:LSM6DSO_FIFO_GYRO_Get_Axes	40	static
+../Drivers/BSP/Components/lsm6dso/lsm6dso.c:3093:9:LSM6DSO_FIFO_GYRO_Get_Axes	32	static
 ../Drivers/BSP/Components/lsm6dso/lsm6dso.c:3126:9:LSM6DSO_FIFO_GYRO_Set_BDR	8	static
 ../Drivers/BSP/Components/lsm6dso/lsm6dso.c:3155:9:LSM6DSO_ACC_Enable_DRDY_On_INT1	16	static
 ../Drivers/BSP/Components/lsm6dso/lsm6dso.c:3179:9:LSM6DSO_ACC_Disable_DRDY_On_INT1	16	static

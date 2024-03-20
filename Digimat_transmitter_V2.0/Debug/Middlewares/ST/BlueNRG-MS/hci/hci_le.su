@@ -12,7 +12,7 @@
 ../Middlewares/ST/BlueNRG-MS/hci/hci_le.c:313:5:hci_le_read_advertising_channel_tx_power	40	static
 ../Middlewares/ST/BlueNRG-MS/hci/hci_le.c:340:5:hci_le_set_random_address	48	static
 ../Middlewares/ST/BlueNRG-MS/hci/hci_le.c:363:5:hci_read_bd_addr	40	static
-../Middlewares/ST/BlueNRG-MS/hci/hci_le.c:389:5:hci_le_create_connection	72	static
+../Middlewares/ST/BlueNRG-MS/hci/hci_le.c:389:5:hci_le_create_connection	64	static
 ../Middlewares/ST/BlueNRG-MS/hci/hci_le.c:426:5:hci_le_create_connection_cancel	40	static
 ../Middlewares/ST/BlueNRG-MS/hci/hci_le.c:443:5:hci_le_encrypt	96	static
 ../Middlewares/ST/BlueNRG-MS/hci/hci_le.c:475:5:hci_le_ltk_request_reply	56	static

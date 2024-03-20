@@ -1,5 +1,4 @@
 ../Drivers/BSP/Components/lis2dw12/lis2dw12.c:243:9:LIS2DW12_GetCapabilities	0	static
-../Drivers/BSP/Components/lis2dw12/lis2dw12.c:1776:16:LIS2DW12_ACC_SetOutputDataRate_When_Disabled	0	static
 ../Drivers/BSP/Components/lis2dw12/lis2dw12.c:1804:16:ReadRegWrap	8	static
 ../Drivers/BSP/Components/lis2dw12/lis2dw12.c:1819:16:WriteRegWrap	8	static
 ../Drivers/BSP/Components/lis2dw12/lis2dw12.c:1637:16:LIS2DW12_ACC_SetOutputDataRate_When_Enabled	32	static

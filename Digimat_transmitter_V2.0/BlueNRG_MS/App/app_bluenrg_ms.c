@@ -77,8 +77,10 @@ extern volatile uint8_t end_read_tx_char_handle;
 extern volatile uint8_t end_read_rx_char_handle;
 extern volatile fine;
 
+
 /* USER CODE BEGIN PV */
 
+volatile float angolo;
 extern float misure_temperatura;
 extern float misure_umidita;
 extern uint8_t acquisizione_da_inviare;
@@ -417,8 +419,9 @@ static void User_Process(void)
 			}
 
 			uint8_t data[20];
-			sprintf((char *)data, "%d,%f,%f#",cuscinetto, misure_temperatura, misure_umidita);
-						sendData(data, sizeof(data));
+			sprintf((char *)data, "%d,%.2f,%.2f,%.2f#",cuscinetto, misure_temperatura, misure_umidita, angolo);
+			sendData(data, sizeof(data));
+			printf("\nAngolo: %f\r\n", angolo);
 			//				sprintf((char *)data, ",%f\r\n", misure_temperatura);
 			//				sendData(data, sizeof(data));
 			contatore_invii++;
@@ -429,7 +432,7 @@ static void User_Process(void)
 		user_button_pressed = 0;
 
 		/*RESET SISTEMA A 30 INVII, CIRCA 30 SECONDI */
-				if(contatore_invii>30) HAL_NVIC_SystemReset();
+		if(contatore_invii>30) HAL_NVIC_SystemReset();
 	}
 
 

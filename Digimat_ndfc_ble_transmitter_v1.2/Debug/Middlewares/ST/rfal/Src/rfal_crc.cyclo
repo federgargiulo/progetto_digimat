@@ -1,2 +1,2 @@
-rfal_crc.c:56:10:rfalCrcCalculateCcitt	2
-rfal_crc.c:74:17:rfalCrcUpdateCcitt	1
+../Middlewares/ST/rfal/Src/rfal_crc.c:56:10:rfalCrcCalculateCcitt	2
+../Middlewares/ST/rfal/Src/rfal_crc.c:74:17:rfalCrcUpdateCcitt	1
